@@ -1,0 +1,74 @@
+nav .logo-box {
+  height: 56px;
+  border-bottom: 1px solid #4b545c;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+nav .logo-box img {
+  height: 70%;
+  width: auto;
+}
+nav .logo-box span {
+  color: rgba(255,255,255,.8);
+  font-size: 1.25rem;
+  margin-left: 6px;
+}
+nav .link-box {
+  padding: 15px;
+}
+nav .link-box li:not(:first-of-type) {
+  margin-top: 5px;
+}
+nav .link-box li a {
+  background-color: transparent;
+  color: #c2c7d0;
+  padding: 6px 12px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .link-box li a:hover {
+  background-color: rgba(255,255,255,.1);
+  color: #fff;
+}
+nav .link-box li a.open {
+  background-color: #007bff;
+  color: #fff;
+}
+nav .link-box li a span .link-icon {
+  margin-right: 8px;
+}
+nav .link-box li .accordion-header .angle-icon {
+  transition: all .5s;
+}
+nav .link-box li .accordion-header.open .angle-icon {
+  transform: rotate(-90deg);
+}
+nav .link-box li .accordion-main {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+nav .link-box li .accordion-main li a {
+  font-size: 13px;
+}
+nav .link-box li .accordion-main li a.selected {
+  background-color: #fff;
+  color: #212529;
+}
+
+
+/* Barをクリックした時 */
+nav.small .logo-box span {
+  font-size: 1rem;
+}
+nav.small .link-box .link-box-ul .link-box-li > a {
+  font-size: 0.8rem;
+}
+nav.small .link-box .link-box-ul .link-box-li ul li a {
+  font-size: 0.6rem;
+}
+nav.small .logo-box img {
+  height: 60%;
+}
