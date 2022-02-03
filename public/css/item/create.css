@@ -1,0 +1,874 @@
+@charset "UTF-8";
+
+.wrapper.create,
+.wrapper.edit {
+  min-height: 100vh;
+  position: relative;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.wrapper.create main,
+.wrapper.edit main {
+  /* 変更 */
+  min-height: calc(100vh - 188px);
+  position: relative;
+  box-sizing: border-box;
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* additional */
+  /* id="item_resist_box_02" --------------------------------------*/
+}
+
+.wrapper.create main li,
+.wrapper.edit main li {
+  list-style: none;
+}
+
+.wrapper.create main a,
+.wrapper.edit main a {
+  text-decoration: none;
+  color: #432;
+}
+
+.wrapper.create main .item_resist_box,
+.wrapper.edit main .item_resist_box {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper.create main .item_resist_box_01_all,
+.wrapper.edit main .item_resist_box_01_all {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wrapper.create main .item_resist_box_01_all.anim_create_hide,
+.wrapper.edit main .item_resist_box_01_all.anim_create_hide {
+  -webkit-animation-name: opa_first;
+          animation-name: opa_first;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+}
+
+.wrapper.create main .item_resist_box_01_all.anim_create_none,
+.wrapper.edit main .item_resist_box_01_all.anim_create_none {
+  display: none;
+}
+
+.wrapper.create main .item_resist_box_01_all.anim_create_show,
+.wrapper.edit main .item_resist_box_01_all.anim_create_show {
+  display: block;
+  -webkit-animation-name: opa_second;
+          animation-name: opa_second;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+}
+
+@-webkit-keyframes opa_first {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opa_first {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes opa_second {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opa_second {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper.create main .item_resist_box_01,
+.wrapper.edit main .item_resist_box_01 {
+  width: 85%;
+  /* 変更 */
+  margin: 108px auto 60px auto;
+  /* margin: 0 auto 60px auto; */
+  border-radius: 20px;
+  border: solid 2px #bbb;
+  box-shadow: 0 0 8px #ddd;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.wrapper.create main .resist_info_01,
+.wrapper.edit main .resist_info_01 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.wrapper.create main .main_resist_title,
+.wrapper.edit main .main_resist_title {
+  width: auto;
+  color: #432;
+  text-align: center;
+  margin: 50px auto 15px;
+  padding: 0 20px 0;
+  font-size: 36px;
+  font-family: "Caveat", cursive;
+  border-bottom: solid 3px #432;
+}
+
+.wrapper.create main .resist_all_01,
+.wrapper.edit main .resist_all_01 {
+  display: flex;
+}
+
+.wrapper.create main .resist_left_div,
+.wrapper.edit main .resist_left_div {
+  width: 29%;
+  height: auto;
+  margin-right: 1%;
+  display: block;
+}
+
+.wrapper.create main .for_preview_image_01,
+.wrapper.edit main .for_preview_image_01 {
+  display: flex;
+  width: 80%;
+  height: calc(80vw * 0.1856);
+  margin: 10px auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: solid 1px #ddd;
+}
+
+.wrapper.create main .for_preview_image_01 img,
+.wrapper.edit main .for_preview_image_01 img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.wrapper.create main .input_file,
+.wrapper.edit main .input_file {
+  margin-top: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.wrapper.create main .file_upload,
+.wrapper.edit main .file_upload {
+  display: block;
+  float: center;
+  width: 75%;
+  margin: auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #2bb7b3;
+}
+
+.wrapper.create main .file_upload:hover,
+.wrapper.edit main .file_upload:hover {
+  cursor: pointer;
+}
+
+.wrapper.create main .file_upload p,
+.wrapper.edit main .file_upload p {
+  font-family: "Segoe UI";
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  line-height: 40px;
+}
+
+.wrapper.create main .img_file_upload,
+.wrapper.edit main .img_file_upload {
+  display: none;
+}
+
+.wrapper.create main .resist_right_div,
+.wrapper.edit main .resist_right_div {
+  width: 69%;
+  height: auto;
+  margin-left: 1%;
+}
+
+.wrapper.create main .named_ID,
+.wrapper.edit main .named_ID {
+  width: auto;
+  font-size: 15px;
+  font-family: "Noto Sans JP", "Segoe UI";
+}
+
+.wrapper.create main .named_ID_image,
+.wrapper.edit main .named_ID_image {
+  font-size: 18px;
+  margin-top: 13px;
+}
+
+.wrapper.create main .named_ID_noncaution,
+.wrapper.edit main .named_ID_noncaution {
+  margin-top: 10px;
+}
+
+.wrapper.create main .required_mark,
+.wrapper.edit main .required_mark {
+  font-size: 20px;
+  color: #c03619;
+}
+
+.wrapper.create main input,
+.wrapper.edit main input {
+  border: none;
+  outline: none;
+  color: #432;
+  margin: 0 auto;
+}
+
+.wrapper.create main input[type=number]::-webkit-outer-spin-button,
+.wrapper.create main input[type=number]::-webkit-inner-spin-button,
+.wrapper.edit main input[type=number]::-webkit-outer-spin-button,
+.wrapper.edit main input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper.create main input[type=number],
+.wrapper.edit main input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper.create main .full_space_form,
+.wrapper.edit main .full_space_form {
+  width: calc(100vw - 875px);
+}
+
+.wrapper.create main .FormOfms,
+.wrapper.edit main .FormOfms {
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  padding-left: 10px;
+  border: 1px solid #432;
+  /* #b82a76 */
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 100%;
+  box-shadow: 3px 3px 8px #eee inset;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .caution_message,
+.wrapper.edit main .caution_message {
+  font-size: 12px;
+  line-height: 14px;
+  min-height: 16px;
+  color: #e60012;
+}
+
+.wrapper.create main .number_with,
+.wrapper.edit main .number_with {
+  display: flex;
+  height: 28px;
+}
+
+.wrapper.create main .number_with p,
+.wrapper.edit main .number_with p {
+  min-width: 28px;
+  height: 28px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .FormOfms_num,
+.wrapper.edit main .FormOfms_num {
+  width: 20%;
+}
+
+.wrapper.create main .FormOfms:focus,
+.wrapper.edit main .FormOfms:focus {
+  border: 2px solid #b82a76;
+}
+
+.wrapper.create main .item_amount_value,
+.wrapper.create main .needs_division,
+.wrapper.edit main .item_amount_value,
+.wrapper.edit main .needs_division {
+  display: flex;
+}
+
+.wrapper.create main .FormOfms_num_value,
+.wrapper.edit main .FormOfms_num_value {
+  width: 10%;
+  margin-left: 10px;
+}
+
+.wrapper.create main .FormOfms_needs,
+.wrapper.edit main .FormOfms_needs {
+  width: 45%;
+}
+
+.wrapper.create main .grade_selection_wrap,
+.wrapper.edit main .grade_selection_wrap {
+  position: relative;
+}
+
+.wrapper.create main .grade_selection_wrap .grade_selection_title,
+.wrapper.edit main .grade_selection_wrap .grade_selection_title {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -3px;
+  margin: auto;
+  text-align: center;
+  width: 100px;
+  font-size: 14px;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .grade_selection,
+.wrapper.edit main .grade_selection {
+  width: 200px;
+  /* additional */
+  margin-left: 10px;
+  padding: 5px 0;
+  border: none;
+  /* additional */
+  border-bottom: solid 2px #2bb7b3;
+  font-size: 14px;
+  /* additional */
+  outline: none;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .grade_selection option,
+.wrapper.edit main .grade_selection option {
+  font-size: 14px;
+  margin: 10px 0;
+  /* additional */
+  color: #432;
+  margin: 2px 0;
+}
+
+.wrapper.create main .List_selection_wrap,
+.wrapper.edit main .List_selection_wrap {
+  position: relative;
+}
+
+.wrapper.create main .List_selection_wrap .List_selection_title,
+.wrapper.edit main .List_selection_wrap .List_selection_title {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -3px;
+  margin: auto;
+  text-align: center;
+  width: 100px;
+  font-size: 14px;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .List_selection,
+.wrapper.edit main .List_selection {
+  width: 240px;
+  margin-left: 10px;
+  padding: 5px 0;
+  border: none;
+  font-size: 14px;
+  /* additional */
+  outline: none;
+  border-bottom: solid 2px #b82a76;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .List_selection option,
+.wrapper.edit main .List_selection option {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #432;
+  margin: 2px 0;
+}
+
+.wrapper.create main .form_area,
+.wrapper.edit main .form_area {
+  width: auto;
+  height: auto;
+  /* additional */
+  padding-left: 10px;
+  min-height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper.create main .tag_per,
+.wrapper.edit main .tag_per {
+  display: flex;
+  margin: 5px 0;
+}
+
+.wrapper.create main .form_area_first,
+.wrapper.edit main .form_area_first {
+  width: 34px;
+  height: 34px;
+  background-color: #2bb7b3;
+  margin-right: 0px;
+  border-radius: 34px 0 0 34px;
+}
+
+.wrapper.create main .form_area_first p,
+.wrapper.edit main .form_area_first p {
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+.wrapper.create main .submit_tag,
+.wrapper.edit main .submit_tag {
+  width: 180px;
+  color: #fff;
+  margin: 0;
+  padding: 2px 0 2px 5px;
+  display: inline-block;
+  line-height: 30px;
+  background-color: #2bb7b3;
+  vertical-align: middle;
+  /* 追加 */
+  font-size: 16px;
+  box-shadow: 2px 2px #eee;
+}
+
+.wrapper.create main .submit_tag::-moz-placeholder, .wrapper.edit main .submit_tag::-moz-placeholder {
+  color: #ddd;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .submit_tag:-ms-input-placeholder, .wrapper.edit main .submit_tag:-ms-input-placeholder {
+  color: #ddd;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .submit_tag::placeholder,
+.wrapper.edit main .submit_tag::placeholder {
+  color: #ddd;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .submit_tag:-ms-input-placeholder,
+.wrapper.edit main .submit_tag:-ms-input-placeholder {
+  color: #ddd;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .submit_tag::-ms-input-placeholder,
+.wrapper.edit main .submit_tag::-ms-input-placeholder {
+  color: #ddd;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .delete_tag_form,
+.wrapper.edit main .delete_tag_form {
+  background-color: #fff;
+  width: 34px;
+  height: 34px;
+  margin: 0 2px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.wrapper.create main .delete_tag_form p,
+.wrapper.edit main .delete_tag_form p {
+  text-align: center;
+  color: #c03619;
+  line-height: 34px;
+  font-size: 34px;
+  font-family: "Segoe UI";
+}
+
+.wrapper.create main .additional_tag_button,
+.wrapper.edit main .additional_tag_button {
+  width: 100px;
+  height: 34px;
+  margin-top: 5px;
+  /* additional */
+  margin-left: 10px;
+  border: none;
+  background-color: #b82a76;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper.create main .additional_tag_button p,
+.wrapper.edit main .additional_tag_button p {
+  color: #fff;
+  line-height: 34px;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+
+.wrapper.create main .detail_box,
+.wrapper.edit main .detail_box {
+  resize: none;
+  width: 100%;
+  height: 110px;
+  padding: 5px 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP";
+  outline: none;
+  border: solid 2px #432;
+  border-radius: 7px;
+}
+
+.wrapper.create main .final_resister,
+.wrapper.edit main .final_resister {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.wrapper.create main .button_item_submit,
+.wrapper.edit main .button_item_submit {
+  border: none;
+  outline: none;
+  background-color: #0068b7;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px #3c7d9b; */
+  box-shadow: 2px 2px #5188b1;
+  color: #fff;
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.wrapper.create main .item_resist_box_02_all,
+.wrapper.edit main .item_resist_box_02_all {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wrapper.create main .item_resist_box_02_all.anim_confirm_none,
+.wrapper.edit main .item_resist_box_02_all.anim_confirm_none {
+  display: none;
+}
+
+.wrapper.create main .item_resist_box_02,
+.wrapper.edit main .item_resist_box_02 {
+  width: 85%;
+  /* 変更 */
+  /* margin: 108px auto 60px auto; */
+  margin: 108px auto 60px auto;
+  border-radius: 20px;
+  border: solid 2px #bbb;
+  box-shadow: 0 0 8px #ddd;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 5000;
+  /* position: absolute; */
+  /* display: none; */
+}
+
+.wrapper.create main .resist_info_02,
+.wrapper.edit main .resist_info_02 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.wrapper.create main .main_resist_title_02,
+.wrapper.edit main .main_resist_title_02 {
+  width: 80%;
+  color: #432;
+  text-align: center;
+  margin: 50px auto 15px;
+  padding: 0 20px 0;
+  font-size: 36px;
+  /* font-family: 'Caveat', cursive; */
+  /* font-family: "Noto Sans JP"; */
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-weight: bolder;
+  border-bottom: solid 3px #432;
+}
+
+.wrapper.create main .resist_all_02,
+.wrapper.edit main .resist_all_02 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+}
+
+.wrapper.create main .resist_left_div,
+.wrapper.edit main .resist_left_div {
+  width: 44%;
+  height: auto;
+  margin-right: 1%;
+  display: block;
+}
+
+.wrapper.create main .for_preview_image_02,
+.wrapper.edit main .for_preview_image_02 {
+  display: flex;
+  width: 90%;
+  height: calc(80vw * 0.1856);
+  margin: 10px 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.wrapper.create main .for_preview_image_02 img,
+.wrapper.edit main .for_preview_image_02 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  margin-top: 0;
+}
+
+.wrapper.create main .resist_right_div,
+.wrapper.edit main .resist_right_div {
+  width: 54%;
+  height: auto;
+  padding-left: 1%;
+  /* border-left: solid 1px #ddd; */
+}
+
+.wrapper.create main .resist_right_div p,
+.wrapper.edit main .resist_right_div p {
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.create main .item_name,
+.wrapper.edit main .item_name {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  font-family: "Noto Sans JP", "Segoe UI";
+}
+
+.wrapper.create main .name_price,
+.wrapper.edit main .name_price {
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.create main .price_of_items,
+.wrapper.edit main .price_of_items {
+  padding-left: 10px;
+  font-size: 36px;
+  font-family: "Arial";
+  font-weight: 600;
+  margin: 10px 0 0;
+  padding-bottom: 20px;
+}
+
+.wrapper.create main .amount_cart,
+.wrapper.edit main .amount_cart {
+  display: flex;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.create main .amount_cart_first,
+.wrapper.edit main .amount_cart_first {
+  width: 100px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.wrapper.create main .amount_of_items_title,
+.wrapper.edit main .amount_of_items_title {
+  text-align: center;
+  font-size: 14px;
+}
+
+.wrapper.create main .amount_of_items,
+.wrapper.edit main .amount_of_items {
+  text-align: center;
+  font-size: 22px;
+}
+
+.wrapper.create main .info_title,
+.wrapper.edit main .info_title {
+  margin: 30px 0 10px;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+
+.wrapper.create main .machanic_info,
+.wrapper.edit main .machanic_info {
+  padding: 0 0 15px 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.create main .machanic_info p,
+.wrapper.edit main .machanic_info p {
+  font-size: 14px;
+  font-family: "Noto Sans JP", "Segoe UI";
+}
+
+.wrapper.create main .division_menu_tag,
+.wrapper.edit main .division_menu_tag {
+  padding: 20px 0;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.create main .grade_division_menu,
+.wrapper.edit main .grade_division_menu {
+  padding-bottom: 14px;
+}
+
+.wrapper.create main .concern_tag_title,
+.wrapper.edit main .concern_tag_title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.wrapper.create main .form_area,
+.wrapper.edit main .form_area {
+  width: auto;
+  height: auto;
+  /* additional */
+  padding-left: 10px;
+  min-height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper.create main .tag_per,
+.wrapper.edit main .tag_per {
+  display: flex;
+  margin: 5px 0;
+}
+
+.wrapper.create main .form_area_first,
+.wrapper.edit main .form_area_first {
+  width: 34px;
+  height: 34px;
+  background-color: #2bb7b3;
+  margin-right: 0px;
+  border-radius: 34px 0 0 34px;
+}
+
+.wrapper.create main .form_area_first p,
+.wrapper.edit main .form_area_first p {
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+.wrapper.create main .submit_tag,
+.wrapper.edit main .submit_tag {
+  width: auto;
+  height: 34px;
+  color: #fff;
+  margin-right: 10px;
+  padding: 2px 20px 2px 5px;
+  display: inline-block;
+  line-height: 30px;
+  background-color: #2bb7b3;
+  vertical-align: middle;
+  /* 追加 */
+  font-size: 16px;
+  box-shadow: 2px 2px #eee;
+  box-sizing: border-box;
+  border-radius: 0 34px 34px 0;
+}
+
+.wrapper.create main .item_discription,
+.wrapper.edit main .item_discription {
+  padding: 14px 0;
+}
+
+.wrapper.create main .detail_of_items,
+.wrapper.edit main .detail_of_items {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.wrapper.create main .final_resister_02,
+.wrapper.edit main .final_resister_02 {
+  display: flex;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.wrapper.create main .button_item_submit_01,
+.wrapper.edit main .button_item_submit_01 {
+  border: none;
+  outline: none;
+  background-color: #f08437;
+  border-radius: 5px;
+  box-shadow: 2px 2px #da6a38;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 100px 0 auto;
+  padding: 10px 25px;
+  font-family: "Noto Sans JP";
+  cursor: pointer;
+}
+
+.wrapper.create main .button_item_submit_02,
+.wrapper.edit main .button_item_submit_02 {
+  border: none;
+  outline: none;
+  background-color: #0068b7;
+  border-radius: 5px;
+  box-shadow: 2px 2px #5188b1;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto 0 100px;
+  padding: 10px 40px;
+  font-family: "Noto Sans JP";
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,278 @@
+.wrapper.auth {
+  background-image: url("/image/auth_background.jpg");
+  background-size: cover;
+  padding-bottom: 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  align-content: center;
+}
+
+.wrapper.auth main {
+  margin-top: 0;
+  min-height: 125vh;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper.auth main li {
+  list-style: none;
+}
+
+.wrapper.auth main a {
+  text-decoration: none;
+}
+
+.wrapper.auth main .login_form_all {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 150px;
+  margin: auto;
+  display: flex;
+  z-index: 2000;
+}
+
+.wrapper.auth main .login_form_all .login_form_left {
+  width: 50%;
+  display: flex;
+}
+
+.wrapper.auth main .login_form_all .login_form_left .login_form_title {
+  width: 300px;
+  height: 400px;
+  margin: 200px 0 auto auto;
+  padding: 0 25px;
+  background-color: #e95884;
+  color: #000;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  box-shadow: 3px 3px #ccc;
+}
+
+.wrapper.auth main .login_form_all .login_form_left .login_form_title .h_area {
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+}
+
+.wrapper.auth main .login_form_all .login_form_left .login_form_title .h_area h1 p {
+  color: #fff;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.auth main .login_form_all .login_form_left .login_form_title .h_area h1 .h1_sub {
+  font-size: 22px;
+}
+
+.wrapper.auth main .login_form_all .login_form_left .login_form_title .h_area h1 .main_title2 {
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.wrapper.auth main .login_form_all .login_form_right {
+  width: 50%;
+  display: flex;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input {
+  width: 300px;
+  height: 400px;
+  margin: 200px auto auto 0;
+  padding: 0 25px;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 3px 3px #ccc;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form {
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .named_ID {
+  margin-top: 5px;
+  font-size: 12px;
+  font-family: "Segoe UI";
+  text-align: left;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form h2 {
+  margin-bottom: 5px;
+  padding-top: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-family: "Segoe UI";
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form input {
+  border: none;
+  outline: none;
+  color: #000;
+  margin: 0 auto;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form input[type=number]::-webkit-outer-spin-button,
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .FormOfms {
+  margin: 10px 0;
+  height: 28px;
+  width: 300px;
+  padding-left: 14px;
+  transition: all 0.2s ease;
+  border-radius: 28px;
+  font-size: 100%;
+  box-shadow: 0 0 4px #aaa;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .FormOfms:focus {
+  transform: scale(1.05, 1.05);
+  transition: all 0.2s ease;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .caution_message {
+  text-align: left;
+  font-size: 12px;
+  line-height: 14px;
+  min-height: 16px;
+  color: #e60012;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .login_button {
+  width: 300px;
+  height: 28px;
+  margin: 20px auto 30px;
+  padding: 5px 20px;
+  text-align: center;
+  background-color: #fff;
+  color: #00b4b6;
+  /* font-family: "Noto Sans JP"; */
+  font-family: "Segoe UI";
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 28px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 4px #aaa;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .login_button:hover {
+  color: #fff;
+  background-color: #0cd6da;
+  cursor: pointer;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .signup_message {
+  padding-bottom: 7px;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .signup_message a {
+  /* border-bottom: solid 1px #000; */
+  color: #00213b;
+  transition: 0.3s;
+}
+
+.wrapper.auth main .login_form_all .login_form_right .login_input .login_form .signup_message a:hover {
+  color: #00b4b6;
+  transition: 0.3s;
+}
+
+.wrapper.auth main .login_form_all.hide_first {
+  -webkit-animation-name: change_1;
+          animation-name: change_1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrapper.auth main .login_form_all.show_first {
+  -webkit-animation-name: returnchange_1;
+          animation-name: returnchange_1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrapper.auth main .login_form_all.none_first {
+  display: none;
+}
+
+@-webkit-keyframes change_1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes change_1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+@-webkit-keyframes returnchange_1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes returnchange_1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+

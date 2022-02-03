@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+.wrapper.show {
+  min-height: 100vh;
+  position: relative;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.wrapper.show main {
+  /* 変更 */
+  min-height: calc(100vh - 188px);
+  position: relative;
+  box-sizing: border-box;
+  /* モーダルCSS */
+}
+
+.wrapper.show main li {
+  list-style: none;
+}
+
+.wrapper.show main a {
+  text-decoration: none;
+  color: #432;
+}
+
+.wrapper.show main .item_resist_box {
+  width: 100%;
+  margin: 108px auto 60px auto;
+  box-sizing: border-box;
+}
+
+.wrapper.show main .item_resist_box .main_resist_title {
+  width: 80%;
+  color: #432;
+  text-align: center;
+  margin: 50px auto 15px;
+  padding: 0 20px 0;
+  font-size: 36px;
+  font-family: "Caveat", cursive;
+  /* font-family: "Noto Sans JP"; */
+  /* font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体"; */
+  font-weight: bolder;
+  border-bottom: solid 3px #432;
+}
+
+.wrapper.show main .item_resist_box .for_edit_delete {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper.show main .item_resist_box .for_edit_delete p {
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #777;
+  border: solid 1px #ccc;
+  border-radius: 7px;
+}
+
+.wrapper.show main .item_resist_box .for_edit_delete p:hover {
+  color: #432;
+  background-color: #ccc;
+}
+
+.wrapper.show main .item_resist_box .for_edit {
+  margin-right: 14px;
+}
+
+.wrapper.show main .item_resist_box .delete_modal_button {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+.wrapper.show main .item_resist_box .resist_all {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+}
+
+.wrapper.show main .item_resist_box .resist_left_div {
+  width: 44%;
+  height: auto;
+  margin-right: 1%;
+  display: block;
+}
+
+.wrapper.show main .item_resist_box .for_preview_image {
+  display: flex;
+  width: 90%;
+  height: calc(80vw * 0.396);
+  margin: 10px 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.wrapper.show main .item_resist_box .for_preview_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  margin-top: 0;
+}
+
+.wrapper.show main .item_resist_box .resist_right_div {
+  width: 54%;
+  height: auto;
+  padding-left: 1%;
+  /* border-left: solid 1px #ddd; */
+}
+
+.wrapper.show main .item_resist_box .resist_right_div p {
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.show main .item_resist_box .item_name {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  font-family: "Noto Sans JP", "Segoe UI";
+}
+
+.wrapper.show main .item_resist_box .name_price {
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.show main .item_resist_box .price_of_items {
+  padding-left: 10px;
+  font-size: 36px;
+  font-family: "Arial";
+  font-weight: 600;
+  margin: 10px 0 0;
+  padding-bottom: 20px;
+}
+
+.wrapper.show main .item_resist_box .amount_cart {
+  height: 100px;
+  display: flex;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.show main .item_resist_box .amount_cart_first {
+  width: 60px;
+  margin: auto 0 auto 15px;
+  display: block;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.wrapper.show main .item_resist_box .amount_of_items_title {
+  text-align: center;
+  font-size: 14px;
+}
+
+.wrapper.show main .item_resist_box .amount_of_items {
+  text-align: center;
+  font-size: 22px;
+}
+
+.wrapper.show main .item_resist_box .for_cart_in {
+  height: 100%;
+  display: flex;
+  margin: auto 40px auto auto;
+}
+
+.wrapper.show main .item_resist_box .amount_change_button {
+  margin-top: 62px;
+  width: 156px !important;
+  padding-left: 20px;
+}
+
+.wrapper.show main .item_resist_box input {
+  border: none;
+  outline: none;
+  color: #000;
+  margin: 0 auto;
+}
+
+.wrapper.show main .item_resist_box input[type=number]::-webkit-outer-spin-button,
+.wrapper.show main .item_resist_box input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper.show main .item_resist_box input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper.show main .item_resist_box .amount_change_button {
+  width: 120px;
+  height: 30px;
+  margin: auto 15px auto 0;
+  padding-left: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.wrapper.show main .item_resist_box .amount_change_button input {
+  border: 1px solid #ccc;
+  font-size: 20px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.wrapper.show main .item_resist_box .amount_change_button input[type=button] {
+  cursor: pointer;
+}
+
+.wrapper.show main .item_resist_box .amount_button {
+  height: 28px;
+  width: 28px;
+  background-color: #e95884;
+  color: #fff;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: none;
+  order: 1;
+}
+
+.wrapper.show main .item_resist_box .FormOfms {
+  height: 28px;
+  width: 50px;
+  transition: all 0.6s ease;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 100%;
+  text-align: center;
+  order: 2;
+}
+
+.wrapper.show main .item_resist_box .submit_button {
+  width: 200px;
+  height: 35px;
+  margin: auto 0;
+}
+
+.wrapper.show main .item_resist_box .button_cartin {
+  width: 180px;
+  height: 35px;
+  margin: auto 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #e95884;
+}
+
+.wrapper.show main .item_resist_box .button_cartin p {
+  text-align: center;
+  /* additional */
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.wrapper.show main .item_resist_box .button_cartin i {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.wrapper.show main .item_resist_box .info_title {
+  margin: 30px 0 10px;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+
+.wrapper.show main .item_resist_box .machanic_info {
+  padding: 0 0 15px 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.show main .item_resist_box .machanic_info p {
+  font-size: 14px;
+  font-family: "Noto Sans JP", "Segoe UI";
+}
+
+.wrapper.show main .item_resist_box .machanic_info a:hover {
+  color: #8e775d;
+}
+
+.wrapper.show main .item_resist_box .division_menu_tag {
+  padding: 20px 0;
+  border-bottom: solid 1px #ddd;
+}
+
+.wrapper.show main .item_resist_box .grade_division_menu {
+  padding-bottom: 14px;
+}
+
+.wrapper.show main .item_resist_box .grade_division a:hover {
+  color: #8e775d;
+}
+
+.wrapper.show main .item_resist_box .concern_tag_title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.wrapper.show main .item_resist_box .form_area {
+  width: auto;
+  height: auto;
+  /* additional */
+  padding-left: 10px;
+  min-height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper.show main .item_resist_box .tag_per {
+  background-color: #2bb7b3;
+  margin: 5px 10px 5px 0;
+  display: flex;
+  border-radius: 34px;
+}
+
+.wrapper.show main .item_resist_box .tag_per:hover {
+  background-color: #e95884;
+}
+
+.wrapper.show main .item_resist_box .form_area_first {
+  width: 34px;
+  height: 34px;
+  /* background-color: #2bb7b3; */
+  margin-right: 0px;
+  border-radius: 34px 0 0 34px;
+}
+
+.wrapper.show main .item_resist_box .form_area_first p {
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+.wrapper.show main .item_resist_box .submit_tag {
+  width: auto;
+  height: 34px;
+  color: #fff;
+  /* margin-right: 10px; */
+  padding: 2px 20px 2px 5px;
+  display: inline-block;
+  line-height: 30px;
+  /* background-color: #2bb7b3; */
+  vertical-align: middle;
+  /* 追加 */
+  font-size: 16px;
+  box-shadow: 2px 2px #eee;
+  box-sizing: border-box;
+  border-radius: 0 34px 34px 0;
+}
+
+.wrapper.show main .item_resist_box .item_discription {
+  padding: 14px 0;
+}
+
+.wrapper.show main .item_resist_box .detail_of_items {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.wrapper.show main .item_resist_box .final_resister {
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.wrapper.show main .item_resist_box .button_item_submit {
+  border: none;
+  outline: none;
+  background-color: #0068b7;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px #3c7d9b; */
+  box-shadow: 2px 2px #5188b1;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 25px;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.show main .modalArea {
+  width: 100%;
+  height: calc(100% - 158px);
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  top: 68px;
+  left: 0;
+}
+
+.wrapper.show main .modalBg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.wrapper.show main .modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: solid 2px #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #aaa;
+}
+
+.wrapper.show main .modalContents p {
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.show main .delete_item_title {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  border-left: solid 4px #e95884;
+}
+
+.wrapper.show main .delete_item_centence {
+  margin-top: 20px;
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+.wrapper.show main .final_dicision {
+  display: flex;
+  margin: 30px auto 20px;
+  text-align: center;
+}
+
+.wrapper.show main .final_dicision button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Noto Sans JP";
+  cursor: pointer;
+}
+
+.wrapper.show main .cansellation_delete {
+  margin: 0 50px 0 auto;
+  padding: 10px 25px;
+  background-color: #f08437;
+  box-shadow: 2px 2px #da6a38;
+}
+
+.wrapper.show main .dicision_delete {
+  margin: 0 auto 0 50px;
+  padding: 10px 40px;
+  background-color: #e8382f;
+  box-shadow: 2px 2px #c41a30;
+}
+
+

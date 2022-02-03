@@ -1,0 +1,371 @@
+.wrapper.auth main .signup_form_all {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  left: 350px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+}
+
+.wrapper.auth main .signup_form_all .signup_form_left {
+  width: 50%;
+  display: flex;
+}
+
+.wrapper.auth main .signup_form_all .signup_form_title {
+  width: 70%;
+  height: calc(100% * 0.2625);
+  margin: 60px 0 0 auto;
+  padding: 0 25px;
+  background-color: #e95884;
+  color: #000;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  box-shadow: 0 0 8px #ccc;
+  z-index: 9999;
+}
+
+.wrapper.auth main .signup_form_all .h_area {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.wrapper.auth main .signup_form_all h1 p {
+  color: #fff;
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.auth main .signup_form_all .h1_sub {
+  font-size: 22px;
+}
+
+.wrapper.auth main .signup_form_all .main_title2 {
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.wrapper.auth main .signup_form_all .signup_form_right {
+  width: 50%;
+  display: flex;
+}
+
+.wrapper.auth main .signup_form_all .signup_control {
+  width: 70%;
+  height: 860px;
+  margin: 60px auto 0 0;
+  padding: 0 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 8px #ccc;
+  z-index: 9998;
+}
+
+.wrapper.auth main .signup_form_all h2 {
+  margin-bottom: 5px;
+  padding-top: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-family: "Segoe UI";
+}
+
+.wrapper.auth main .signup_form_all .input_box {
+  width: 100%;
+}
+
+.wrapper.auth main .signup_form_all .named_ID {
+  margin-top: 5px;
+  font-size: 12px;
+  font-family: "Segoe UI";
+  text-align: left;
+}
+
+.wrapper.auth main .signup_form_all .required_mark {
+  font-size: 20px;
+  color: #c03619;
+}
+
+.wrapper.auth main .signup_form_all .staff_name {
+  display: flex;
+}
+
+.wrapper.auth main .signup_form_all .family_name {
+  width: 48%;
+  padding-right: 2%;
+}
+
+.wrapper.auth main .signup_form_all .given_name {
+  width: 48%;
+  padding-left: 2%;
+}
+
+.wrapper.auth main .signup_form_all input {
+  border: none;
+  outline: none;
+  color: #000;
+  margin: 0 auto;
+}
+
+.wrapper.auth main .signup_form_all input[type=number]::-webkit-outer-spin-button,
+.wrapper.auth main .signup_form_all input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper.auth main .signup_form_all input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper.auth main .signup_form_all .FormOfms {
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  padding-left: 14px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 10px;
+  font-size: 100%;
+  box-shadow: 0 0 4px #aaa;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .signup_form_all .FormOfms:focus {
+  transform: scale(1.05, 1.05);
+  transition: all 0.2s ease;
+}
+
+.wrapper.auth main .signup_form_all .caution_message {
+  font-size: 12px;
+  line-height: 14px;
+  min-height: 16px;
+  color: #e60012;
+}
+
+.wrapper.auth main .signup_form_all fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.wrapper.auth main .signup_form_all .day_or_night {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.wrapper.auth main .signup_form_all .day_or_night:hover,
+.wrapper.auth main .signup_form_all .job_timezone:hover {
+  background-color: #e4e4e480;
+  cursor: pointer;
+}
+
+.wrapper.auth main .signup_form_all .job_timezone {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  padding: 9px 10px;
+  margin-right: 18px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  font-family: "Segoe UI";
+  outline: none;
+}
+
+.wrapper.auth main .signup_form_all .day_or_night:checked + .job_timezone {
+  background-color: #9cd8f6;
+  color: #fff;
+}
+
+.wrapper.auth main .signup_form_all .input_box_02 {
+  padding-bottom: 5px;
+}
+
+.wrapper.auth main .signup_form_all .assignment_or_not {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.wrapper.auth main .signup_form_all .adm_rights {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  padding: 9px 10px;
+  margin-right: 18px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  font-family: "Segoe UI";
+  outline: none;
+}
+
+.wrapper.auth main .signup_form_all .assignment_or_not:checked + .adm_rights {
+  background-color: #9cd8f6;
+  color: #fff;
+}
+
+.wrapper.auth main .signup_form_all .adm_rights:hover,
+.wrapper.auth main .signup_form_all .assignment_or_not:hover {
+  background-color: #e4e4e480;
+  cursor: pointer;
+}
+
+.wrapper.auth main .signup_form_all .password_for_assignment {
+  display: none;
+  padding: 0 15px;
+  width: 75%;
+  box-shadow: 0 0 4px #ddd;
+}
+
+.wrapper.auth main .signup_form_all .pw_box {
+  color: #00213b;
+  border-color: #00213b;
+}
+
+.wrapper.auth main .signup_form_all .input_file {
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .signup_form_all .file_upload {
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin-left: 0;
+  border-radius: 5px;
+  border: dashed 3px #9cd8f6;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .signup_form_all .file_upload:hover {
+  cursor: pointer;
+}
+
+.wrapper.auth main .signup_form_all .file_upload p {
+  text-align: center;
+  padding: 0 15px;
+  font-family: "Segoe UI";
+  width: 100%;
+  font-size: 20px;
+  color: #9cd8f6;
+  line-height: 56px;
+  box-sizing: border-box;
+}
+
+.wrapper.auth main .signup_form_all .img_file_upload {
+  display: none;
+}
+
+.wrapper.auth main .signup_form_all .final_resister {
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper.auth main .signup_form_all .signup_button {
+  width: 40%;
+  height: 28px;
+  margin: 50px auto;
+  padding: 5px 20px;
+  background-color: #fff;
+  color: #00b4b6;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Segoe UI";
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #aaa;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.wrapper.auth main .signup_form_all .signup_button:hover {
+  color: #fff;
+  background-color: #0cd6da;
+  cursor: pointer;
+}
+
+.wrapper.auth main .signup_form_all.hide_second {
+  -webkit-animation-name: change_2;
+          animation-name: change_2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrapper.auth main .signup_form_all.show_second {
+  -webkit-animation-name: returnchange_2;
+          animation-name: returnchange_2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrapper.auth main .signup_form_all.none_second {
+  display: none;
+}
+
+@-webkit-keyframes change_2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-350px);
+  }
+}
+
+@keyframes change_2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-350px);
+  }
+}
+
+@-webkit-keyframes returnchange_2 {
+  0% {
+    opacity: 1;
+    transform: translateX(-350px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes returnchange_2 {
+  0% {
+    opacity: 1;
+    transform: translateX(-350px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}
+
+

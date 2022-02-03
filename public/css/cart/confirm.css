@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+.wrapper.cart-confirm {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm li {
+  list-style: none;
+}
+
+.wrapper.cart-confirm a {
+  text-decoration: none;
+  color: #432;
+}
+
+.wrapper.cart-confirm main {
+  /* 変更 */
+  min-height: calc(100vh - 80px);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box {
+  width: 85%;
+  /* 変更 */
+  margin: 108px auto 60px auto;
+  border-radius: 20px;
+  border: solid 2px #bbb;
+  box-shadow: 0 0 8px #ddd;
+  box-sizing: border-box;
+  background-color: #fff;
+  /* アイテムのタイトルが入ってるやつ --------------------------------*/
+  /* ------------------------------------------------------------- */
+  /* めっちゃへんこうした */
+  /* 下の登録ボタンとか ------------------------------------------------ */
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .shopping_cart_info {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .shopping_cart_title {
+  width: auto;
+  color: #432;
+  text-align: center;
+  margin: 50px auto 15px;
+  padding: 0 20px 0;
+  font-size: 36px;
+  font-family: "Caveat", cursive;
+  border-bottom: solid 3px #432;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head p {
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head_name {
+  width: calc(100% - 356px);
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head_per_price {
+  width: 100px;
+  margin-right: 0;
+  border-right: solid 1px #ddd;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head_item_amount {
+  width: 100px !important;
+  height: auto;
+  display: flex;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items_head_acc_price {
+  width: 156px;
+  margin-right: 0;
+  display: flex;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items li {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 5px 0;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #f5f3f2;
+  display: flex;
+  /* additional */
+  font-family: "Noto Sans JP";
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items li:hover {
+  background-color: #f5f3f2;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .for_table_image {
+  display: flex;
+  width: 125px !important;
+  height: 150px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .select_items li img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_title_tag {
+  width: calc(100% - 481px);
+  height: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_title {
+  width: 100%;
+  font-size: 19px;
+  color: #432;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_model_number,
+.wrapper.cart-confirm main .shopping_cart_box .products_discription {
+  font-size: 14px;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_discription {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_tag_all {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_tag {
+  width: auto;
+  height: 44px;
+  margin: auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .tag_per {
+  display: flex;
+  margin: 5px 0 5px 10px;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .submit_tag {
+  width: auto;
+  height: 34px;
+  color: #fff;
+  /* margin-right: 10px; */
+  padding: 2px 10px;
+  display: inline-block;
+  line-height: 30px;
+  background-color: #2bb7b3;
+  vertical-align: middle;
+  /* 追加 */
+  font-size: 16px;
+  box-shadow: 2px 2px #eee;
+  box-sizing: border-box;
+  border-radius: 34px;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .add_info_form {
+  width: 100%;
+  height: 22px;
+  display: flex;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .add_info_form p {
+  width: auto;
+  height: auto;
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 80%;
+  font-family: "Noto Sans JP";
+  box-shadow: 0 0 3px #ddd;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .price_number_form {
+  width: auto;
+  height: 150px;
+  display: flex;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_price {
+  height: 100%;
+  width: 100px;
+  margin-right: 0;
+  border-right: solid 1px #ddd;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_price p {
+  width: 100%;
+  margin: auto 0;
+  color: #e60012;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .item_amount_all {
+  width: 100px !important;
+  height: auto;
+  display: flex;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .item_amount_all p {
+  width: 100%;
+  margin: auto 0;
+  color: #432;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_price_all {
+  width: 156px;
+  margin-right: 0;
+  display: flex;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .products_price_all p {
+  width: 100%;
+  margin: auto 0;
+  color: #e60012;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .dsp_all_price {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .dsp_all_price p {
+  font-family: "Noto Sans JP";
+  font-size: 26px;
+  padding: 7px 34px;
+  box-shadow: 2px 2px #ccc;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .dsp_all_price_title {
+  margin: 0 0 0 auto;
+  background-color: #e95884;
+  color: #fff;
+  border: solid 4px #e95884;
+  border-radius: 0 0 0 10px;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .all_price {
+  margin-right: 0;
+  border: solid 4px #e95884;
+  border-radius: 0 0 10px 0;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .final_resister {
+  display: flex;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .button_item_submit_01 {
+  border: none;
+  outline: none;
+  background-color: #f08437;
+  border-radius: 5px;
+  box-shadow: 2px 2px #da6a38;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 100px 0 auto;
+  padding: 10px 25px;
+  font-family: "Noto Sans JP";
+  cursor: pointer;
+}
+
+.wrapper.cart-confirm main .shopping_cart_box .button_item_submit_02 {
+  border: none;
+  outline: none;
+  background-color: #227447;
+  border-radius: 5px;
+  box-shadow: 2px 2px #2a4743;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto 0 100px;
+  padding: 10px 40px;
+  font-family: "Noto Sans JP";
+  cursor: pointer;
+}
+
+.wrapper.cart-confirm .footer {
+  width: 100%;
+  background-color: #2bb7b3;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+

@@ -1,0 +1,212 @@
+.wrapper.admin {
+  main.main-cart {
+    //モーダルウィンドウ
+    .modal-window {
+      width: 600px;
+      .modal-contena {
+        .modal-main {
+          padding: 0;
+          .cart-form-contena {
+            padding: 35px 0 20px;
+            .export-message {
+              height: 60px;
+              line-height: 60px;
+              font-size: 19px;
+              text-align: center;
+              margin-top: 10px;
+              color: #ff1122;
+              .alert-icon {
+                color: #eb0202;
+                margin-right: 10px;
+              }
+            }
+            .form-input {
+              display: flex;
+              height: 50px;
+              justify-content: flex-end;
+              margin-right: 50px;
+              margin-top: 50px;
+              position: relative;
+              //共通
+              input {
+                font-size: 16px;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                padding-left: 10px;
+                border: none;
+                border-bottom: 2px solid silver;
+                outline: none;
+                font-family: 'Noto Sans Japaneze';
+              }
+              input:focus ~ label,
+              input:valid ~ label {
+                transform: translateY(-30px);
+                color: #9c009c;
+                font-size: 15px;
+              }
+              .underline {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+              }
+              .underline::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #9c009c;
+                transform: scaleX(0);
+                transition: transform .3s ease;
+              }
+              input:focus ~ .underline::before,
+              input:valid ~ .underline::before {
+                transform: scaleX(1);
+              }
+              label {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                color: gray;
+                pointer-events: none;
+                transition: all .3s ease;
+              }
+            }
+            .amount_change_button {
+              margin: 25px 0 30px;
+              text-align: center;
+              input[type="button"], input[type="number"] {
+                border: none;
+                outline: none;
+                color: #333;
+                margin: 0 auto;
+              }
+              input[type="number"] {
+                text-align: center;
+                border: 1px solid #c5c5c5;
+                width: 100px;
+                height: 40px;
+                border-radius: 12px;
+                font-size: 25px;
+                box-sizing: border-box;
+                margin: 0 15px;
+              }
+              input[type="number"]::-webkit-inner-spin-button,
+              input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none; 
+                margin: 0; 
+              }
+              input[type="button"] {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                font-size: 30px;
+                color: #fff;
+              }
+              input[type="button"]:hover {
+                cursor: pointer;
+              }
+              input[type="button"].minus {
+                background: #e2270e;
+              }
+              input[type="button"].plus {
+                background: #0f71e0;
+              }
+            }
+            .buttons {
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 10px;
+              .cancel-button, .ok-button {
+                width: 130px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 4px;
+                a {
+                  display: block;
+                  color: #eee;
+                  font-size: 12px;
+                  height: 100%;
+                }
+              }
+              .cancel-button {
+                background: #9b9b9b;
+              }
+              .ok-button {
+                background: #b301b3;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-contena {
+      .submain-contena {
+        // max-width: calc(100vw - 340px);
+        .submain-contena-logo {
+          background: #9c009c;
+        }
+        .submain {
+          .no-carts {
+            height: 300px;
+            p {
+              height: 100%;
+              margin: auto 0;
+              line-height: 300px;
+              text-align: center;
+              font-size: 20px;
+              color: #aaa;
+              .info-icon {
+                margin-right: 20px;
+              }
+            }
+          }
+          .buttons {
+            li.add-button {
+              background: #b301b3;
+            }
+            li.refresh-button {
+              background: #9b9b9b;
+            }
+          }
+          .table {
+            overflow-x: scroll;
+            table {
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+              thead {
+                th {
+                  padding: 0 20px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                }
+              }
+              tbody {
+                tr {
+                  height: 40px;
+                  max-height: 40px;
+                  td {
+                    font-size: 12px;
+                    border: 1px solid #aaa;
+                    padding: 0 10px;
+                    a {
+                      .trash-icon {
+                        margin: 0;
+                      }
+                    }
+                  }
+                  td.center {
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1000 @@
+/* 共通部分 ------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+main {
+  min-height: calc(100vh - 150px);
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+  color: #432;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  cursor: pointer;
+}
+p, div {
+  user-select: none;
+}
+.wrapper{
+  min-height: 100vh;
+  position: relative; /* 相対位置 */
+  box-sizing: border-box; /* 全て含めてmin -height : 100 vh */
+  padding-bottom: 80px;
+}
+
+/* ヘッダー----------------------------------------------------------------------------------- */
+header.page_header {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  .header_menu {
+    height: 50px;
+    display: flex;
+    margin-right: 43px;
+    margin-top: 15px;
+  }
+  .shopping_cart {
+    height: 35px;
+    display: flex;
+    margin: 0 25px auto 0;
+  }
+  .shopping_cart a {
+    box-sizing: border-box;
+    display: flex;
+  }
+  .shopping_cart a.animation{
+    animation-name: cartanimation;
+    animation-duration: .5s;
+  }
+  .shopping_cart_first {
+    text-align: center;
+    margin-right: 7px;
+  }
+  .shopping_cart_icon {
+    height: 41px;
+    margin: 0 auto;
+    margin-right: 2px;
+  }
+  /* 追加 */
+  .shopping_cart_number {
+    min-width: 25px;
+    margin-top: 0px;
+    margin-left: -23px;
+  }
+  /* 追加 */
+  .shopping_cart_amount {
+    text-align: center;
+    padding: 1px 4px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #e60012;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 18px;
+  }
+  .notification_button {
+    height: 35px;
+    margin: 0 25px auto 0;
+    text-align: center;
+  }
+  .notification_button a {
+    box-sizing: border-box;
+  }
+  .notification_top {
+    display: flex;
+  }
+  .notification_icon {
+    height: 41px;
+    margin: auto;
+    margin-right: 2px;
+  }
+  .notification_number {
+    min-width: 25px;
+    margin-top: 5px;
+    margin-left: -23px;
+  }
+  .notification_amount {
+    padding: 1px 4px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #e60012;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 18px;
+  }
+  .notification_message_div {
+    width: 500px;
+    max-height: calc(100vh - 200px);
+    position: absolute;
+    top: 67px;
+    right: 120px;
+    background-image: url('/image/notification_background.jpg');
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px #aaa;
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+  }
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+  /*スクロールバーの軌道*/
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  }
+  /*スクロールバーの動く部分*/
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 50, .5);
+    border-radius: 10px;
+    box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+  }
+  .notification_message_div_bg {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px 0 0 10px;
+  }
+  .notification_message_all {
+    width: auto;
+    max-width: 85%;
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px #aaa;
+  }
+  .mes_my {
+    margin: 10px 10px 10px auto;
+  }
+  .mes_other {
+    margin: 10px auto 10px 10px;
+  }
+  .notification_message_date_all {
+    width: 70px;
+  }
+  .notification_message_date {
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+  }
+  .stock_trigger {
+    background: #ce3b8c;
+  }
+  .user_trigger {
+    background: #0044ffea;
+  }
+  .item_trigger {
+    background: #019401e3;
+  }
+  .thema_trigger {
+    background: #750175;
+  }
+  .export_trigger {
+    background: #007e94;
+  }
+  .subaction_trigger {
+    background: #ee7c12;
+  }
+  .notification_message_date_inside {
+    width: 100%;
+    margin: auto;
+  }
+  .event_year {
+    line-height: 20px;
+    margin: auto 0 2px 0;
+  }
+  .notification_message_date_inside hr {
+    border: solid 1px #fff;
+    margin: 0 5px;
+  }
+  .event_date {
+    line-height: 20px;
+    margin: 5px 0 auto 0;
+  }
+  .notification_message {
+    width: auto;
+    max-width: calc(100% - 70px);
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+  }
+  .notification_message_inside {
+    margin-right: 0;
+  }
+  .notification_message_inside p {
+    text-align: left;
+  }
+  .for_my_account {
+    height: 45px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto auto auto;
+  }
+  .for_account {
+    display: none;
+  }
+  .for_my_account_ul {
+    z-index: 1000;
+    display: none;
+    width: 175px;
+    position: absolute;
+    top: 67px;
+    right: 40px;
+    background-color: #fcf7f7;
+    text-align: left;
+    border-radius: 5px;
+    border: solid 1px #432;
+    box-shadow: 0 0 8px #ccc;
+  }
+  .for_my_account ul li {
+    padding: 5px 10px;
+    margin: 0;
+    border-left: solid 3px #432;
+  }
+  .for_my_account ul li:not(:last-child) {
+    border-bottom: solid 1px #432;
+  }
+  .for_my_account ul li a {
+    color: #432;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+  .for_my_account ul li:hover {
+    background-color: #f9d6e2;
+  }
+  .account_img {
+    height: 45px;
+    width: 45px;
+    margin: auto;
+  }
+  .account_img a {
+    box-sizing: border-box;
+    margin: auto;
+  }
+  .account_img a img {
+    box-sizing: border-box;
+  }
+  .profile_img {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+    margin-right: 2px;
+    padding: 3px;
+    border-radius: 50%;
+    border: double 2px #e6c5cf;
+  }
+  .profile_img:hover {
+    border-color: #bdd8dd;
+  }
+  h1 {
+    height: 55px;
+    margin-top: 8px;
+    margin-left: 40px;
+    font-size: 26px;
+  }
+  h1 a {
+    color: #432;
+  }
+  h1 p {
+    font-family: "Noto Sans JP";
+  }
+  .h1_sub {
+    font-size: 15px;
+  }
+  .main_title {
+    line-height: 20px;
+  }
+  .main_title2 {
+    line-height: 34px;
+  }
+  
+  @keyframes cartanimation {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(0.8);
+    }
+    40% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* reset */
+  button{
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    padding:0;
+    appearance:none;
+  }
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  li, p{
+    margin: 0;
+  }
+}
+.wrapper.main, .wrapper.cart-index, .wrapper.cart-confirm {
+  header.page_header {
+    border-color: #e95884;
+    transition: all 1s;
+  }
+}
+.wrapper.user-show, .wrapper.user-edit {
+  header.page_header {
+    border-color: #0068b7;
+    transition: all 1s;
+  }
+}
+.wrapper.inventory {
+  header.page_header {
+    border-color: #4d4398;
+    transition: all 1s;
+  }
+}
+.wrapper.create, .wrapper.show, .wrapper.edit {
+  header.page_header {
+    border-color: #2bb7b3;
+    transition: all 1s;
+  }
+}
+
+/* フッター-----------------------------------------------------------------------------*/
+
+footer.page_footer {
+  width: 100%;
+  background-color: #e6c5cf;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  position: absolute; /* 相対位置 */
+  bottom: 0; /* 下に固定 */
+}
+.wrapper.main, .wrapper.cart-index, .wrapper.cart-confirm {
+  footer.page_footer {
+    background-color: #e95884;
+  }
+}
+.wrapper.user-show, .wrapper.user-edit {
+  footer.page_footer {
+    background-color: #0068b7;
+  }
+}
+.wrapper.inventory {
+  footer.page_footer {
+    background-color: #4d4398;
+  }
+}
+.wrapper.create, .wrapper.show, .wrapper.edit {
+  footer.page_footer {
+    background-color: #2bb7b3;
+  }
+}
+.footer p {
+  font-family: "Noto Sans JP";
+}
+
+/* Openingのアニメーション --------------------------------------------------- */
+.opening-animation {
+  opacity: 0;
+  color: #333;
+  font-size: 30px;
+  position: fixed;
+  z-index: 3001;
+  top: 30%;
+  left: 42%;
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+  animation-name: openingtext;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  img {
+    cursor: progress;
+  }
+}
+.opening-animation.hide {
+  display: none;
+}
+.opening-animation-filter {
+  opacity: 1;
+  position: fixed;
+  background: #fff;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 3000;
+  animation-name: openingfilter;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.opening-animation-filter.hide {
+  display: none;
+}
+
+@keyframes openingtext{
+  0% { 
+    opacity: 0;
+  }
+  30% { 
+    opacity: 1;
+  }
+  80% { 
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes openingfilter{
+  0% { 
+    opacity: 1;
+  }
+  60% { 
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Adminpageのアニメーション-------------------------------------------------- */
+
+.admin-animation {
+  opacity: 0;
+  color: #fff;
+  font-size: 50px;
+  position: fixed;
+  z-index: 4;
+  width: 100vw;
+  line-height: 100vh;
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+  animation-name: admintext;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.admin-animation.hide {
+  display: none;
+}
+.admin-animation-filter {
+  opacity: 1;
+  position: fixed;
+  background: #333;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+  animation-name: adminfilter;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.admin-animation-filter.hide {
+  display: none;
+}
+
+@keyframes admintext{
+  0% { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% { 
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes adminfilter{
+  0% { 
+    opacity: 1;
+  }
+  60% { 
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Adminpageのローディング ------------------------------------------ */
+.admin-loader{
+  display: block;
+  position: absolute;
+  width: 60px; /*ローディングアイコンの横サイズ*/
+  height: 60px; /*ローディングアイコンの縦サイズ*/
+  border-radius: 50%;  /*CSS3で円を書く*/
+  border: 9px solid purple;  /*円に○の白枠をつける*/
+  z-index: 4;
+  border-right-color: transparent; /*円の右にC状の空きをつける*/
+  animation: spin 1s linear infinite; /*1秒毎にくるくる回転するアニメーション*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.admin-loader.hidden{
+  display: none;
+}
+
+.admin-mask{
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.admin-mask.hidden {
+  display: none;
+}
+
+@keyframes spin{
+  0% { transform: rotate(0deg);   opacity: 0.2; } /*0%の時は20％の透明度*/
+  50%  { transform: rotate(180deg); opacity: 1.0; } /*50%の時は透明度なし*/
+  100%   { transform: rotate(360deg); opacity: 0.2; } /*100%の時に20％の透明度に戻る*/
+}
+
+/* Adminpageのローディング ------------------------------------------ */
+.adminLoadingContena {
+  .adminMain-loader{
+    // opacity: 0;
+    display: block;
+    position: fixed;
+    width: 60px; /*ローディングアイコンの横サイズ*/
+    height: 60px; /*ローディングアイコンの縦サイズ*/
+    border-radius: 50%;  /*CSS3で円を書く*/
+    border: 9px solid purple;  /*円に○の白枠をつける*/
+    z-index: 4;
+    border-right-color: transparent; /*円の右にC状の空きをつける*/
+    animation: spin 1s linear infinite; /*1秒毎にくるくる回転するアニメーション*/
+    top: calc(50% - 60px / 2);
+    left: calc(50% + 270px / 2);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .adminMain-loader.hidden {
+    opacity: 0;
+  }
+  
+  .adminMain-loader.none{
+    display: none;
+  }
+  
+  .adminMain-mask{
+    position: fixed;
+    min-width: calc(100vw - 300px);
+    right: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    top: 0;
+    z-index: 3;
+  }
+
+  .adminMain-mask.hidden {
+    animation-name: opacityDown;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .adminMain-mask.none {
+    display: none;
+  }
+
+  @keyframes opacityDown {
+    0% { opacity: 1; }
+    100%   { opacity: 0; }
+  }
+  
+  @keyframes spin{
+    0% { transform: rotate(0deg);   opacity: 0.2; } /*0%の時は20％の透明度*/
+    50%  { transform: rotate(180deg); opacity: 1.0; } /*50%の時は透明度なし*/
+    100%   { transform: rotate(360deg); opacity: 0.2; } /*100%の時に20％の透明度に戻る*/
+  }
+}
+
+/* 画面全体のローディング------------------------------------------------------------------------------- */
+.loader {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 997;
+}
+.loader.hidden {
+  animation-name: opacityDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.loader.none {
+  display: none;
+}
+.loading,
+.loading::before,
+.loading::after {
+  background: #e95884;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loading {
+  color: #e95884;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loading::before,
+.loading::after {
+  position: fixed;
+  top: 0;
+  content: '';
+}
+.loading::before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loading::after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes opacityDown {
+  0% { opacity: 1; }
+  100%   { opacity: 0; }
+}
+
+/* メッセージ ----------------------------------------------------------------------- */
+.message {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 20px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 2px;
+  width: 300px;
+  height: 55px;
+  line-height: 55px;
+  z-index: 2;
+}
+
+.flash_message {
+  background: #79b323;
+}
+
+.error_message {
+  background: #e77070;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.message.animation {
+  animation-name: message;
+  animation-duration: 3s;
+}
+
+@keyframes message {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 150px);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translate(-50%, 200px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translate(-50%, 200px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 150px);
+  }
+}
+.flex_box {
+  position: relative;
+}
+
+.box_first {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 100px;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+.box_first.hide_first {
+  animation-name: change_1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.box_first.show_first {
+  animation-name: returnchange_1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.box_second {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 400px;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+}
+.box_second.hide_second {
+  animation-name: change_2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box_second.show_second {
+  animation-name: returnchange_2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change_1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes returnchange_1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes change_2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes returnchange_2 {
+  0% {
+    opacity: 1;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}
+
+// アラートメッセージ-----------------------------------------------------
+
+.alert-contena {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50px;
+  width: 600px;
+  height: 200px;
+  z-index: 2;
+  .alert-main {
+    opacity: 0;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    z-index: 1;
+    .alert-contena-logo {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      top: -25px;
+      left: 15px;
+      border-radius: 3px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      background: #9c009c;
+      .alert-contena-icon {
+        color: #fff;
+      }
+    }
+    .alert-message {
+      height: 60px;
+      line-height: 60px;
+      color: #464646;
+      text-align: center;
+      padding-top: 45px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      li {
+        width: 100px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 5px;
+        margin-right: 25px;
+        a {
+          display: block;
+          color: #eee;
+          font-size: 13px;
+          height: 100%;
+          .buttons-icon {
+            margin-right: 10px;
+          }
+        }
+      }
+      li.back-button {
+        background: #9b9b9b;
+      }
+      li.ok-button {
+        background: #9c009c;
+      }
+    }
+  }
+  .alert-main.none {
+    display: none;
+  }
+  .alert-main.show {
+    animation-name: showmodal;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showmodal {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .alert-main.hide {
+    animation-name: hidemodal;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes hidemodal {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  .alert-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #333333bd;
+  }
+}
+.alert-contena.none {
+  display: none;
+}

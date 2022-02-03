@@ -1,0 +1,677 @@
+.wrapper.admin main.main-dashboard .modal-window {
+  position: fixed;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena {
+  width: 80%;
+  margin: 100px auto 0;
+  height: 350px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form {
+  height: 60px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input {
+  width: 60%;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input input,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input input,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input input {
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid silver;
+  outline: none;
+  font-family: "Noto Sans Japaneze";
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input input:focus ~ label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input input:valid ~ label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input input:focus ~ label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input input:valid ~ label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input input:focus ~ label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input input:valid ~ label {
+  transform: translateY(-30px);
+  color: #9c009c;
+  font-size: 15px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input .underline,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input .underline,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input .underline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input .underline::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #9c009c;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input input:focus ~ .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input input:valid ~ .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input input:focus ~ .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input input:valid ~ .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input input:focus ~ .underline::before,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input input:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input label,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form .form-input .caution_message,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form .form-input .caution_message,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form .form-input .caution_message {
+  font-size: 11px;
+  color: red;
+  position: absolute;
+  bottom: -25px;
+  left: 10px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .first-row-form {
+  padding-top: 100px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .second-row-form,
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .create-form-contena .modal-content .third-row-form {
+  margin-top: 30px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena {
+  width: 80%;
+  margin: 50px auto 0;
+  height: 300px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content h1 {
+  height: 80px;
+  line-height: 80px;
+  padding-left: 20px;
+  font-size: 23px;
+  color: #727272;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena {
+  display: flex;
+  margin: 50px auto 0;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox {
+  margin: 0 auto;
+  width: 85px;
+  height: 85px;
+  text-align: center;
+  line-height: 85px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: #fff;
+  border: 1px solid #aaa;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox .check-icon {
+  color: #aaa;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox .check-icon.checkIcon {
+  -webkit-animation-name: checkIcon;
+          animation-name: checkIcon;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox .check-icon.noncheckIcon {
+  -webkit-animation-name: noncheckIcon;
+          animation-name: noncheckIcon;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes checkIcon {
+  0% {
+    transform: scaleX(1);
+  }
+
+  80% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@keyframes checkIcon {
+  0% {
+    transform: scaleX(1);
+  }
+
+  80% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@-webkit-keyframes noncheckIcon {
+  0% {
+    transform: scaleX(2.5);
+  }
+
+  80% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes noncheckIcon {
+  0% {
+    transform: scaleX(2.5);
+  }
+
+  80% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox:hover {
+  cursor: pointer;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.item.checkItem {
+  background: #019401e3;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.item.checkItem .item-icon {
+  color: #fff;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.notification.checkNotification {
+  background: #c20202e5;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.notification.checkNotification .notification-icon {
+  color: #fff;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.history.checkHistory {
+  background: #006120;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box .checkbox.history.checkHistory .history-icon {
+  color: #fff;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box p {
+  margin-top: 10px;
+  color: darkgray;
+  text-align: center;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box p.checkItem {
+  color: #019401e3;
+  font-weight: bold;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .check-contena .check-contena-box p.checkNotification {
+  color: #c20202e5;
+  font-weight: bold;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .refresh-form-contena .modal-content .caution_message {
+  color: #d10202;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena {
+  width: 80%;
+  margin: 50px auto 0;
+  height: 330px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content h1 {
+  height: 80px;
+  line-height: 80px;
+  padding-left: 20px;
+  font-size: 23px;
+  color: #727272;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena {
+  margin: 50px 0 0;
+  height: 100px;
+  text-align: center;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .icon-contena {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .icon-contena img {
+  display: block;
+  width: 80px;
+  cursor: default;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .icon-contena .arrow-icon {
+  color: #dadada;
+  display: block;
+  font-size: 50px;
+  margin: 0 30px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .icon-contena .database-icon {
+  display: block;
+  font-size: 80px;
+  color: #757575;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .icon-contena.hidden {
+  display: none;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .import-loader {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 9px solid purple;
+  z-index: 4;
+  border-right-color: transparent;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .import-loader.hidden {
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .loading-message {
+  margin-top: 10px;
+  color: purple;
+  font-size: 12px;
+  text-align: center;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .loading-contena .loading-message.hidden {
+  display: none;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .caution_message {
+  height: 20px;
+  color: #d10202;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .file-form {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .file-form label {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #384878;
+  font-size: 11px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .file-form label input[type=file] {
+  display: none;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .file-form label:hover {
+  opacity: 0.8;
+}
+
+.wrapper.admin main.main-dashboard .modal-window .modal-contena .modal-main .import-form-contena .modal-content .file-form p {
+  padding-left: 10px;
+  color: #333;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena {
+  margin: 50px 20px 0;
+  display: grid;
+  grid-auto-rows: 120px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-flow: row;
+  grid-gap: 30px;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.562) 0px 3px 8px;
+  opacity: 0;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main {
+  display: flex;
+  position: relative;
+  width: 240px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .left-count-info {
+  width: 65%;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .left-count-info .info-name {
+  height: 40%;
+  line-height: 48px;
+  padding-left: 30px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .left-count-info .info-count {
+  height: 60%;
+  color: #fff;
+  font-size: 33px;
+  padding-left: 40px;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .left-count-info .info-count.info-size {
+  font-size: 26px;
+  line-height: 54px;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info {
+  width: 35%;
+  line-height: 120px;
+  text-align: center;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .icon {
+  vertical-align: middle;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .users-icon {
+  color: #0044ffea;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .items-icon {
+  color: #019401e3;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .cart-icon {
+  color: #5252f1;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .notification-icon {
+  color: #c20202e5;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .tag-icon {
+  color: #ce3b8c;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .thema-icon {
+  color: #750175;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .history-icon {
+  color: #006120;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .user-image-icon {
+  color: #c27e01;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info .count-info-main .right-count-info .item-image-icon {
+  color: #007e94;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info.show {
+  -webkit-animation-name: countinfo;
+          animation-name: countinfo;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes countinfo {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes countinfo {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-users {
+  background: #0077ffe7;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-items {
+  background: #00c200e8;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-cart {
+  background: #1313db;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-notification {
+  background: #ff3c01e1;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-tag {
+  background: #fc63b7;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-thema {
+  background: #b301b3;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .count-info-history {
+  background: #007910;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .size-info-user {
+  background: #f19d01;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .count-info-contena .size-info-item {
+  background: #00bcdd;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain-contena-logo {
+  background: #329b01;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .lottie {
+  min-width: 50%;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .lottie .lottie-content {
+  margin: 0 auto;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena {
+  width: 1fr;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena h1 {
+  font-family: Verdana;
+  font-size: 25px;
+  color: #333;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena .explane {
+  width: 90%;
+  margin: 55px auto 0;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena .explane p {
+  font-family: Verdana;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena .action-link {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background: #006effe7;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena .action-link::before {
+  background: #009e00;
+  content: "";
+  display: block;
+  height: 100%;
+  left: -110%;
+  position: absolute;
+  transition: 0.3s;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box .explane-contena .action-link:hover::before {
+  left: 0;
+}
+
+.wrapper.admin main.main-dashboard .main-contena .submain-contena .submain .submain-content .action-box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+

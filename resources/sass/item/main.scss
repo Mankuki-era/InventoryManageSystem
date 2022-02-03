@@ -1,0 +1,813 @@
+
+.wrapper.main, .wrapper.inventory{
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  main {
+    min-height: calc(100vh - 150px);
+    position: relative;
+    box-sizing: border-box;
+    li {
+      list-style: none;
+      color: #432;
+    }
+    a {
+      text-decoration: none;
+    }
+    /* メイン部分 --------------------------------------------------- */
+    /* 購入か消費かを決めるバー -------------------------------------- */
+    .buy_consume_bar {
+      width: auto;
+      height: 60px;
+      margin-top: 68px;
+      /* background-color: #f8f8f8; */
+    }
+    .select_buy_consume {
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-right: 40px;
+      height: 60px;
+    }
+    .select_buy_consume ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .select_buy_consume li {
+      margin-left: 15px;
+      border-style: solid;
+      border-radius: 0 0 10px 10px;
+      border-width: thin;
+      /* box-shadow: 3px 3px #ccc; */
+    }
+    .select_buy_consume a {
+      padding: 7px 10px;
+      color: #fff;
+    }
+    .select_buy_consume li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .select_buy {
+      background-color: #e95884;
+      border-color: #e95884;
+      box-shadow: 1px 2px #8b272b;
+    }
+    .select_consume {
+      background-color: #4d4398;
+      border-color: #4d4398;
+      box-shadow: 1px 2px #333;
+    }
+    .changing_english {
+      font-size: 20px;
+      font-family: 'Economica', sans-serif;
+    }
+    .changing_japanese {
+      font-family: "Noto Sans JP";
+    }
+    .ch_white {
+      color: #fff;
+    }
+
+    /* ある意味、商品ページのヘッダ的なやつ --------------------------- */
+
+    .main_products_title {
+      width: 80%;
+      background-color: #00b4b6;
+      color: #fff;
+      text-align: center;
+      margin: 30px auto 40px;
+      font-size: 36px;
+      font-family: 'Caveat', cursive;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* サイドバーと商品リストまとめたやつ ------------------------------ */
+
+    .page_of_main {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* カテゴリー分けのサイドバー -------------------------------------- */
+
+    .category_division {
+      width: 18%;
+      height: auto;
+      margin-right: 1%;
+      border-top: solid 4px #432;
+      order: 1;
+    }
+    .division_of_allitem {
+      margin: 14px 2px;
+    }
+    .division_of_allitem li {
+      width: auto;
+      height: auto;
+      margin: 5px 10px 0px;
+      font-size: 24px;
+      font-family: 'Caveat', cursive;
+      text-align: center;
+      border: solid 2px #432;
+      transition: all 0.3s;
+    }
+    .division_of_allitem li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      color: #432;
+    }
+    .division_of_allitem li:hover a:hover {
+      background-color: #432;
+      color: #fff;
+      cursor: pointer;
+    }
+    .division_of_allitem  a:hover {
+      color: #fff;
+    }
+    .category_division_title {
+      margin: 30px 10px 0;
+      font-size: 24px;
+      font-family: 'Segoe UI';
+      border-bottom: solid 4px;
+    }
+    .before_grade_division {
+      margin: 0 10px;
+    }
+    .before_grade_division_li {
+      margin-top: 10px;
+      font-size: 20px;
+      font-family: 'Segoe UI';
+      border-bottom: solid 3px;
+    }
+    .before_grade_division_li a {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      color: #432;
+    }
+    .before_grade_division_li_final {
+      font-family: "Noto Sans JP";
+    }
+    .accordion_menu {
+      margin-left: 10px;
+    }
+    .accordion_header {
+      display: flex;
+      box-sizing: border-box;
+      border-bottom: solid 2px #432;
+      padding: 2px 0;
+    }
+    .accordion_header_4c {
+      display: flex;
+      box-sizing: border-box;
+      border-bottom: solid 2px #432;
+      padding: 2px 0;
+      margin-left: 10px;
+    }
+    .a_color_select {
+      font-size: 16px;
+      font-family: "Noto Sans JP";
+      color: #432;
+    }
+    .menu_icon {
+      margin: auto 5px auto auto;
+      text-align: right;
+      font-size: 10px;
+      transition: all 0.5s;
+      cursor: default;
+    }
+    .open .menu_icon {
+      transform: rotate(-90deg);
+    }
+    .theme_division {
+      margin-left: 10px;
+      display: none;
+    }
+    .theme_division li {
+      margin-top: 5px;
+    }
+    .theme_division ul li a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 3px 0 3px 8px;
+      font-size: 14px;
+      font-family: "Noto Sans JP";
+      color: #432;
+      border-radius: 5px;
+      transition: all 0.1s;
+    }
+    .theme_division ul li a:hover {
+      background-color: #e95884;
+      color: #fcfcfc;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* 商品リストのタイトル -------------------------------------------- */
+
+    .main_products {
+      width: 80%;
+      height: auto;
+      padding-left: 1%;
+      order: 2;
+    }
+    .name_with_search_bar {
+      display: flex;
+      border-bottom: solid 2px;
+      border-color: #432;
+      box-sizing: border-box;
+    }
+    .item_category_name {
+      width: auto;
+      font-size: 28px;
+      font-family: 'Caveat', cursive;
+    }
+    .item_category_name span {
+      font-family: "Noto Sans JP";
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    .category_span_first {
+      margin-left: 15px;
+    }
+    .search_bar {
+      width: auto;
+      height: 34px;
+      text-align: right;
+      margin: auto 0px auto auto;
+      box-sizing: border-box;
+    }
+    .search_bar_form {
+      display: flex;
+    }
+    .search_text {
+      font-size: 16px;
+      height: 34px;
+      margin-right: 0;
+      padding: 5px 5px 5px 15px;
+      border-radius: 17px 0 0 17px;
+      outline: 0;
+      background-color: #f6f6f6;
+    }
+    .search_decision {
+      height: 34px;
+      padding: 5px 10px 5px 0;
+      background-color: #f6f6f6;
+      color: #a7d9dd;
+      outline: none;
+      border: none;
+      font-size: 16px;/*アイコンサイズ*/
+      border-radius: 0 17px 17px 0;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* 表示件数指定 -------------------------------------------------- */
+    /* 追加したよん */
+    .select_item_amount_all {
+      width: 100%;
+      margin: 20px 0;
+      display: flex;
+    }
+    .select_item_amount_all p {
+      height: 24px;
+      padding: 5px;
+      line-height: 24px;
+      border: solid 2px #fff;
+    }
+    .item_amount_dsp {
+      padding-left: 5px;
+    }
+    .select_item_amount_div_all {
+      height: auto;
+      margin: 0 20px 0 auto;
+      display: flex;
+    }
+    .select_item_amount_div {
+      width: 100px;
+      height: 38px;
+      cursor: pointer;
+    }
+    .select_item_amount_p {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 5px 15px !important;
+      line-height: 20px;
+      border: solid 2px #999 !important;
+      border-radius: 7px;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+    .select_menu {
+      width: 100px;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 0 4px #aaa;
+      position: absolute;
+      z-index: 1;
+      display: none;
+    }
+    .select_menu li {
+      padding-left: 15px;
+      border: solid 1px #fff;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .select_menu li:hover {
+      background-color: #64c0ab;
+      color: #fff;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* 商品リスト -------------------------------------------------- */
+
+    .select_items {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      margin-top: 10px;
+      position: relative; // サブローディングのため
+    }
+
+    /* サブローディング -------------------------------------------- */
+    .sub-loader {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      z-index: 997;
+    }
+    .sub-loader.subloadingHide {
+      display: none;
+    }
+    .sub-loading,
+    .sub-loading::before,
+    .sub-loading::after {
+      background: #e95884;
+      -webkit-animation: load1 1s infinite ease-in-out;
+      animation: load1 1s infinite ease-in-out;
+      width: 1em;
+      height: 4em;
+    }
+    .sub-loading {
+      color: #e95884;
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      font-size: 10px;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+    .sub-loading::before,
+    .sub-loading::after {
+      position: absolute;
+      top: 0;
+      content: '';
+    }
+    .sub-loading::before {
+      left: -1.5em;
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    .sub-loading::after {
+      left: 1.5em;
+    }
+    @-webkit-keyframes load1 {
+      0%,
+      80%,
+      100% {
+        box-shadow: 0 0;
+        height: 4em;
+      }
+      40% {
+        box-shadow: 0 -2em;
+        height: 5em;
+      }
+    }
+    @keyframes load1 {
+      0%,
+      80%,
+      100% {
+        box-shadow: 0 0;
+        height: 4em;
+      }
+      40% {
+        box-shadow: 0 -2em;
+        height: 5em;
+      }
+    }
+
+    .no-items {
+      width: 100%;
+      height: 300px;
+      line-height: 300px;
+      text-align: center;
+      color: #aaa;
+      .info-icon {
+        color: #aaa;
+      }
+    }
+    .select_items li {
+      width: 100%;
+      height: 150px;
+      margin: 0;
+      padding: 5px 0;
+      border-top: solid 1px;
+      border-bottom: solid 1px;
+      border-color: #f5f3f2;
+      display: flex;
+      /* additional */
+      font-family: "Noto Sans JP";
+    }
+    .select_items li:hover {
+      background-color: #f5f3f2;
+    }
+    .for_table_image {
+      display: flex;
+      width: 125px;
+      height: 150px;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .select_items li img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+    }
+    .products_title_tag {
+      width: calc(85% - 420px);
+      height: 100%;
+      padding-left: 20px;
+    }
+    .products_title {
+      width: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .products_title a {
+      font-size: 19px;
+      color: #432;
+    }
+    .products_title a:hover {
+      color: #8e775d;
+    }
+    .products_model_number, .products_discription {
+      font-size: 14px;
+    }
+    .products_discription {
+      width: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+    /* めっちゃへんこうした */
+    .products_tag_all {
+      width: auto;
+      height: 72px;
+      display: flex;
+    }
+    .products_tag {
+      width: auto;
+      height: 44px;
+      margin: auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .tag_per {
+      display: flex;
+      margin: 5px 0 5px 10px;
+    }
+    .submit_tag {
+      width: auto;
+      height: 34px;
+      color: #fff;
+      /* margin-right: 10px; */
+      padding: 2px 10px;
+      display: inline-block;
+      line-height: 30px;
+      background-color: #2bb7b3;
+      vertical-align: middle;
+      /* 追加 */
+      font-size: 16px;
+      box-shadow: 2px 2px #eee;
+      box-sizing: border-box;
+      border-radius: 34px;
+    }
+    .submit_tag:hover {
+      background-color: #e95884;
+    }
+    .price_number_form {
+      width: 450px;
+      height: 150px;
+      display: flex;
+    }
+    .products_price {
+      height: 100%;
+      width: 80px;
+      padding-left: 20px;
+      margin-right: 0;
+    }
+    .products_price p {
+      margin: 65px 0;
+      color: #e60012;
+      font-weight: bold;
+      text-align: center;
+    }
+    .products_amount {
+      height: 100%;
+      width: 80px;
+      padding-left: 20px;
+      margin-right: 0;
+      display: flex;
+    }
+    .products_amount_div {
+      margin: auto 0;
+    }
+    .products_amount_div p {
+      margin: 0;
+      text-align: center;
+    }
+    .amount_num {
+      color: #e60012;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .amount_change_button {
+      margin-top: 62px;
+      width: 156px !important;
+      padding-left: 20px;
+    }
+    input {
+      border: none;
+      outline: none;
+      color: #000;
+      margin: 0 auto;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    .amount_change_button {
+      width: 120px;
+      height: 30px;
+      margin-top: 63px 0 0;
+      padding-left: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .amount_change_button input {
+      border: 1px solid #ccc;
+      font-size: 20px;
+      vertical-align: middle;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+    }
+    .amount_change_button input[type="button"]{
+        cursor: pointer;
+    }
+    .amount_button {
+      height: 28px;
+      width: 28px;
+      background-color: #e95884;
+      color: #fff;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 4px;
+      -ms-user-select: none;
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      border: none;
+      order: 1;
+    }
+    .amount_button.inventory {
+      background-color: #4d4398;
+    }
+    .FormOfms {
+      height: 28px;
+      width: 50px;
+      transition: all .6s ease;
+      border: 1px solid #000;
+      border-radius: 4px;
+      background-color: #fff;
+      font-size: 100%;
+      text-align: center;
+      order: 2;
+    }
+    .button_cartin {
+      width: 180px;
+      height: 35px;
+      margin: 61px 15px 0;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background-color: #e95884;
+      cursor: pointer;
+    }
+    .submit_button {
+      width: 200px;
+      margin-right: 0;
+    }
+    .button_cartin.button_cartin_cancel {
+      background-color: #2bb7b3;
+    }
+    .inventory_input, .inventory_output {
+      height: 50%;
+      display: flex;
+    }
+    .inventory_input_button {
+      margin: auto 0 7px auto;
+    }
+    .inventory_output_button {
+      margin: 7px 0 auto auto;
+    }
+    .button_inventory {
+      width: 180px;
+      height: 35px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button_cartin_in {
+      background-color: #4d4398;
+    }
+    .button_cartin_out {
+      background-color: #9f002d;
+    }
+    .button_cartin p, .button_inventory p {
+      text-align: center;
+      /* additional */
+      font-family: "Noto Sans JP";
+      font-size: 14px;
+      border-radius: 5px;
+      color: #fff;
+    }
+    .button_cartin i, .button_inventory i {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* ページネーションのやつ ------------------------------------- */
+
+    .for_pagenation_div {
+      width: 100%;
+      margin: 40px 0;
+    }
+    .for_pagenation_ul {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    .for_pagenation_li {
+      width: 35px;
+      height: 35px;
+      margin: 0 15px;
+      border: solid 1px #666;
+      border-radius: 35px;
+      display: flex;
+      box-sizing: border-box;
+      transition: all 0.2s;
+    }
+    .for_pagenation_li_gap {
+      width: 20px;
+      height: 35px;
+      margin: 0 15px;
+      border: solid 2px #fff;
+      display: flex;
+      box-sizing: border-box;
+    }
+    .for_pagenation_li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      line-height: 31px;
+      text-align: center;
+      color: #666;
+      transition: all 0.2s;
+    }
+    .for_pagenation_li:hover {
+      border: solid 2px #2bb7b3;
+      background-color: #2bb7b3;
+      transition: all 0.2s;
+    }
+    .for_pagenation_li:hover a {
+      color: #fff;
+    }
+    .for_pagenation_li a:hover {
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .for_pagenation_li_selected {
+      border: solid 2px #e95884;
+      background-color: #e95884;
+    }
+    .for_pagenation_li_selected a {
+      color: #fff;
+    }
+    .for_pagenation_li_selected:hover {
+      border: solid 2px #e95884;
+      background-color: #e95884;
+    }
+    .for_pagenation_li_selected a:hover {
+      color: #fff;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* ページの上部に戻るボタン的な ------------------------------------- */
+    /* 完全に変わった感じ */
+    .for_pagetop {
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px 0;
+      box-sizing: border-box;
+      text-align: center;
+      /* background-color: #fff; */
+    }
+    .for_pagetop_icon {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .for_pagetop p {
+      width: 100px;
+      margin: 0 auto;
+      text-align: center;
+      /* background-color: #fff; */
+    }
+    .for_pagetop p a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      color: #432;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* 新規作成ボタン ------------------------------------------------ */
+    /* 変更したよ */
+    .for_new_item_making {
+      width: 80px;
+      height: 80px;
+      background-color: #2bb7b3;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #ccc;
+    }
+    .for_new_item_making a {
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      /* additional */
+      font-family: "Noto Sans JP";
+    }
+    .for_item_making_div {
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+    }
+    .create_item_icon {
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+  }
+}
+
+
+// 以下はCSS--------------------------------------------------------
+
