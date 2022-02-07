@@ -1,0 +1,66 @@
+/* モーダルウィンドウ */
+.modal-area {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-area.show {
+  display: block;
+  animation: fadeIn .3s forwards;
+}
+.modal-area.hide {
+  display: block;
+  animation: fadeOut .3s forwards;
+}
+.modal-area .modal-mask {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1ed6;
+}
+.modal-area .modal-contena {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: .3rem;
+  overflow: hidden;
+}
+.modal-area .modal-contena .modal-header {
+  background-color: #007bff;
+  height: 3rem;
+}
+.modal-area .modal-contena .close-modal {
+  position: absolute;
+  color: #fff;
+  top: .3rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-area .modal-contena .modal-box {
+  padding: 1rem 2.5rem;
+}
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

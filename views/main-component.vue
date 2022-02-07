@@ -2,52 +2,32 @@
   <main>
     <div class="header">
       <ul>
-        <li><a href="" @click.prevent.stop="clickBar"><i class="fas fa-bars"></i></a></li>
+        <li><a href="javascript:void(0)" id="bar"><i class="fas fa-bars"></i></a></li>
       </ul>
       <p>管理者</p>
     </div>
-    <div class="main">
-      <div class="content-header">
-        <h1>一覧</h1>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="card-header">
-            一覧
-          </div>
-          <div class="card-body">
-            <table>
-              <thead>
-                <tr>
-                  <th>製品名</th>
-                  <th>型番</th>
-                  <th>URL</th>
-                  <th>必要数</th>
-                  <th>在庫数</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>カーボン抵抗(炭素皮膜抵抗)</td>
-                  <td>１／４Ｗ１００Ω(１００本入)</td>
-                  <td>https://akizukidenshi.com/catalog/g/gR-25101/</td>
-                  <td>250</td>
-                  <td>600</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
+    <loading-component ref="loadingChild"></loading-component>
+    <router-view ref="routerChild" @loading-event="loadingEvent" @open-modal="openModal" @message-event="messageEvent"></router-view>
   </main>
 </template>
 
 <script>
 module.exports = {
   methods: {
-    clickBar: function(){
-      this.$emit('click-bar')
+    loadingEvent: function(bool){
+      this.$refs.loadingChild.loadingEvent(bool);
+    },
+    openModal: function(func, id, index){
+      this.$emit('open-modal', func, id, index);
+    },
+    indexTypeClick: function(){
+      this.$refs.routerChild.indexTypeClick();
+    },
+    dataChange: function(index, data){
+      this.$refs.routerChild.dataChange(index, data);
+    },
+    messageEvent: function(message, bool, initFlag){
+      this.$emit('message-event', message, bool, initFlag);
     }
   }
 }

@@ -1,0 +1,59 @@
+/* ローディングアニメーション */
+.message {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 0.25rem;
+  z-index: 7;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.message p {
+  margin: 0;
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message p .check-icon {
+  color: #3db93d;
+  margin-right: .5rem;
+}
+.message p .cross-icon {
+  color: #d75865;
+  margin-right: .5rem;
+}
+.message p span {
+  color: #555;
+}
+.message.success {
+  border: 1px solid #3db93d;
+  background-color: #b8e5c3;
+}
+.message.error {
+  border: 1px solid #bb676f;
+  background-color: #e5c3c6;
+}
+.message.animation {
+  display: block;
+  animation: messageIn 2.5s forwards;
+}
+@keyframes messageIn{
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 10px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
