@@ -2,7 +2,7 @@
 const router = new VueRouter({
   mode:'history', // .htaccessを記入してリフレッシュ時のnot foundを回避
   routes: [
-    { 
+    {
       path: '/',
       name: 'root',
       redirect: '/index',
@@ -48,7 +48,7 @@ Vue.component('type02-component', httpVueLoader('../views/main/create/type02-com
 Vue.component('loading-component', httpVueLoader('../views/share/loading-component.vue'));
 
 // ポート番号
-var port = 8888
+var port = 8888;
 
 const app = new Vue({
   el: "#app",
