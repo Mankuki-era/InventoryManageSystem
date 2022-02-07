@@ -1,0 +1,108 @@
+/* ローディングアニメーション */
+.bar-box {
+  height: 5px;
+  position: relative;
+  background-color: #f4f6f9;
+}
+.bar-box .bar01, .bar-box .bar02, .bar-box .bar03, .bar-box .bar04 {
+  position: absolute;
+  left: 0;
+  height: 5px;
+}
+.bar-box .bar01, .bar-box .bar03 {
+  background-color:#198eee;
+}
+.bar-box .bar02, .bar-box .bar04 {
+  background-color: #f4f6f9;
+}
+.bar-box .bar01.animation {
+  z-index: 1;
+  animation: bar01 2s linear forwards infinite ;
+}
+.bar-box .bar02.animation {
+  z-index: 2;
+  animation: bar02 2s linear forwards infinite ;
+}
+.bar-box .bar03.animation {
+  z-index: 3;
+  width: 0;
+  animation: bar03 2s linear forwards infinite;
+}
+.bar-box .bar04.animation {
+  z-index: 4;
+  width: 0;
+  animation: bar04 2s forwards infinite;
+}
+
+@keyframes bar01 {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 35%;
+  }
+  50% {
+    width: 100%;
+  }
+}
+@keyframes bar02 {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  25%{
+    width: 20%;
+  }
+  40% {
+    width: 75%;
+  }
+  50% {
+    width: 90%;
+  }
+  60% {
+    width: 100%;
+  }
+}
+@keyframes bar03 {
+  0% {
+    width: 0;
+  }
+  50%{
+    width: 0;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes bar04 {
+  0% {
+    width: 0;
+  }
+  65% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.save-mask {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fefefe;
+}
+.save-mask.show {
+  display: block;
+  opacity: 0.2;
+}

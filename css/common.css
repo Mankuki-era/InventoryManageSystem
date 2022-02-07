@@ -28,14 +28,52 @@ a {
   width: 250px;
   background-color: #343a40;
   box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
-  z-index: 1;
+  z-index: 5;
   transition: all .5s;
 }
 .wrapper nav.small {
-  width: 150px;
+  width: 4.6rem;
+}
+.wrapper nav.small:hover {
+  width: 250px;
 }
 .wrapper main {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+
+/* ボタン */
+.wrapper ul.button-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.wrapper ul.button-box li:not(:first-of-type){
+  margin-left: .3rem;
+}
+.wrapper ul.button-box li a {
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+  font-size: .9rem;
+  line-height: 2rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.wrapper ul.button-box li a:not(.disabled):hover {
+  opacity: .8;
+}
+.wrapper ul.button-box li a.disabled {
+  background-color: #007bffa9;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+}
+.wrapper ul.button-box li a.delete {
+  background-color: #ef142a;
+  color: #fff;
 }

@@ -25,50 +25,15 @@ main .main .content-header {
 main .main .content-header h1 {
   font-size: 30px;
   margin: 0;
-}
-main .main .content .card {
-  box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 0 solid rgba(0,0,0,.125);
-  border-radius: 0.25rem;
+  align-items: center;
 }
-main .main .card .card-header {
-  background-color: #007bff;
-  color: #fff;
-  border-bottom: 1px solid rgba(0,0,0,.125);
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+main .main .content-header .chevron-icon {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #888;
 }
-main .main .card .card-body table {
-  border-collapse: collapse;
-  width: 100%;
-}
-main .main .card .card-body table thead th {
-  border-bottom: 2px solid #dee2e6;
-}
-main .main .card .card-body table tbody td {
-  border-top: 1px solid #dee2e6;
-}
-main .main .card .card-body table thead th, main .main .card .card-body table tbody td {
-  padding: 0.75rem;
-  font-size: 12px;
-}
-main .main .card .card-body table tbody tr:hover {
-  color: #212529;
-  background-color: rgba(0,0,0,.075);
-}
-main .main .card .card-body table thead th:first-of-type, main .main .card .card-body table tbody td:first-of-type {
-  padding-left: 1.5rem;
+main .main .content-header span {
+  color: rgba(0,0,0,.5);
+  font-size: 1rem;
 }

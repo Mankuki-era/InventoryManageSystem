@@ -46,6 +46,10 @@ nav .link-box li .accordion-header .angle-icon {
 nav .link-box li .accordion-header.open .angle-icon {
   transform: rotate(-90deg);
 }
+nav .link-box li .accordion-header .trash-icon {
+  margin-left: 0.16rem;
+  margin-right: 0.7rem;
+}
 nav .link-box li .accordion-main {
   padding-top: 5px;
   padding-left: 10px;
@@ -60,7 +64,7 @@ nav .link-box li .accordion-main li a.selected {
 
 
 /* Barをクリックした時 */
-nav.small .logo-box span {
+/* nav.small .logo-box span {
   font-size: 1rem;
 }
 nav.small .link-box .link-box-ul .link-box-li > a {
@@ -71,4 +75,4 @@ nav.small .link-box .link-box-ul .link-box-li ul li a {
 }
 nav.small .logo-box img {
   height: 60%;
-}
+} */

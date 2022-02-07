@@ -1,0 +1,98 @@
+.type01-contena {
+  padding: 10px 20px;
+}
+.type01-contena .sample-area .sample-download {
+  width: 180px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.type01-contena .sample-area .sample-download a {
+  display: block;
+  text-align: center;
+  line-height: 29px;
+  font-size: 9px;
+  font-weight: bold;
+  color: #5d646b;
+}
+.type01-contena .sample-area .sample-download a img {
+  height: 23px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.type01-contena .preview-area {
+  margin-top: 10px;
+}
+.type01-contena .preview-area .msg-box {
+  margin-bottom: 5px;
+  height: 25px;
+}
+.type01-contena .preview-area .msg-box p {
+  padding-left: 10px;
+  line-height: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.type01-contena .preview-area .msg-box .err-msg {
+  color: #dc3545;
+}
+.type01-contena .preview-area .msg-box .success-msg {
+  color: #28a745;
+}
+.type01-contena .preview-area .preview-box {
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+}
+.type01-contena .preview-area .preview-box .no-preview {
+  height: 100%;
+  text-align: center;
+  line-height: 350px;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+.type01-contena .preview-area .preview-box table {
+  border-collapse:  collapse;
+  width: 100%;
+}
+.type01-contena .preview-area .preview-box table th, .type01-contena .preview-area .preview-box table td {
+  padding: 0.35rem;
+  font-size: 10px;
+  border: solid 1px #ccc;
+}
+.type01-contena .preview-area .preview-box table td.err {
+  background-color: #ff00004e;
+}
+
+.type01-contena .file-area {
+  margin-top: 10px;
+}
+.type01-contena .file-area label {
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 10px;
+  background-color: #6c757d;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.type01-contena .file-area label:hover {
+  opacity: .8s;
+}
+.type01-contena .file-area span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+.type01-contena .file-area label input[type="file"] {
+  display: none;
+}
+
+.type01-contena ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.type01-contena ul li:not(:first-of-type) {
+  margin-left: 10px;
+}
