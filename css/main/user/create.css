@@ -1,0 +1,114 @@
+.content.user-create .card .card-header {
+  background-color: #007bff;
+  color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 0.55rem 1.25rem;
+  position: relative;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content.user-create .card .card-header span .plus-square-icon {
+  margin-right: 0.7rem;
+}
+.content.user-create .card .card-body {
+  padding: 10px 20px;
+}
+.content.user-create .card .card-body .sample-area .sample-download {
+  width: 180px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.content.user-create .card .card-body .sample-area .sample-download a {
+  display: block;
+  text-align: center;
+  line-height: 29px;
+  font-size: 9px;
+  font-weight: bold;
+  color: #5d646b;
+}
+.content.user-create .card .card-body .sample-area .sample-download a img {
+  height: 23px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.content.user-create .card .card-body .preview-area {
+  margin-top: 10px;
+}
+.content.user-create .card .card-body .preview-area .msg-box {
+  margin-bottom: 5px;
+  height: 25px;
+}
+.content.user-create .card .card-body .preview-area .msg-box p {
+  padding-left: 10px;
+  line-height: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.content.user-create .card .card-body .preview-area .msg-box .err-msg {
+  color: #dc3545;
+}
+.content.user-create .card .card-body .preview-area .msg-box .success-msg {
+  color: #28a745;
+}
+.content.user-create .card .card-body .preview-area .preview-box {
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+}
+.content.user-create .card .card-body .preview-area .preview-box .no-preview {
+  height: 100%;
+  text-align: center;
+  line-height: 350px;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+.content.user-create .card .card-body .preview-area .preview-box table {
+  border-collapse:  collapse;
+  width: 100%;
+}
+.content.user-create .card .card-body .preview-area .preview-box table th, .content.user-create .card .card-body .preview-area .preview-box table td {
+  padding: 0.35rem;
+  font-size: 10px;
+  border: solid 1px #ccc;
+}
+.content.user-create .card .card-body .preview-area .preview-box table td.err {
+  background-color: #ff00004e;
+}
+
+.content.user-create .card .card-body .file-area {
+  margin-top: 10px;
+}
+.content.user-create .card .card-body .file-area label {
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 10px;
+  background-color: #6c757d;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.content.user-create .card .card-body .file-area label:hover {
+  opacity: .8s;
+}
+.content.user-create .card .card-body .file-area span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+.content.user-create .card .card-body .file-area label input[type="file"] {
+  display: none;
+}
+
+.content.user-create .card .card-body ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.content.user-create .card .card-body ul li:not(:first-of-type) {
+  margin-left: 10px;
+}

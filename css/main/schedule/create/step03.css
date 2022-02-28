@@ -1,0 +1,43 @@
+.card-body .step03 .table-contena table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.card-body .step03 .table-contena table th {
+  background-color: #f3f3f3;
+  padding: 0;
+  white-space: nowrap;
+}
+.card-body .step03 .table-contena table th, .card-body .step03 .table-contena table td {
+  border: 1px solid #aaa;
+  color: #333;
+}
+.card-body .step03 .table-contena table thead tr .thema-name {
+  text-align: center;
+  writing-mode: vertical-rl;
+  font-size: .8rem;
+}
+.card-body .step03 .table-contena table thead tr .team-name {
+  text-align: center;
+  font-size: .8rem;
+  line-height: 2rem;
+}
+.card-body .step03 .table-contena table tbody tr th {
+  width: 10rem;
+  text-align: center;
+  font-size: .8rem;
+}
+.card-body .step03 .table-contena table tbody tr td {
+  padding: 0;
+  height: 1.8rem;
+}
+.card-body .step03 .table-contena table tbody tr td select {
+  appearance: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: -webkit-center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}

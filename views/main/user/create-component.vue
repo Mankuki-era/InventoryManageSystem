@@ -1,37 +1,49 @@
 <template>
-  <div class="type01-contena">
-    <ul class="sample-area">
-      <li class="sample-download"><a href="../../doc/format.xlsx" download><img src="../img/excel.png" alt="画像">XLSXサンプルをダウンロード</a></li>
-    </ul>
-    <div class="preview-area">
-      <div class="msg-box">
-        <p class="err-msg" v-show="fields.fileErr">{{ fields.errAmount }}箇所でエラーが発生しました.</p>
-        <p class="success-msg" v-show="!fields.fileErr && preview.length > 0">データは正常です.</p>
-      </div>
-      <div class="preview-box">
-        <p class="no-preview" v-if="preview.length === 0">プレビュー表示エリア</p>
-        <table v-else>
-          <thead>
-            <tr>
-              <th></th>
-              <th v-for="(column, index) in columnArray" :key="index">{{ column }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(data, index) in preview" v-bind:key="index">
-              <td>{{ index + 1 }}</td>
-              <td v-for="column in columnArray" :key="column" :class="{ err: data[column].err !== ''}">{{ data[column].val }}</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="main">
+    <div class="content-header">
+      <h1>学生データ<i class="fas fa-chevron-right chevron-icon"></i><span>登録</span></h1>
+    </div>
+    <div class="content user-create">
+      <div class="card">
+        <div class="card-header">
+          <span><i class="fas fa-plus-square fa-lg plus-square-icon"></i>一括追加</span>
+        </div>
+        <div class="card-body">
+          <ul class="sample-area">
+            <li class="sample-download"><a href="../../doc/format.xlsx" download><img src="../img/excel.png" alt="画像">XLSXサンプルをダウンロード</a></li>
+          </ul>
+          <div class="preview-area">
+            <div class="msg-box">
+              <p class="err-msg" v-show="fields.fileErr">{{ fields.errAmount }}箇所でエラーが発生しました.</p>
+              <p class="success-msg" v-show="!fields.fileErr && preview.length > 0">データは正常です.</p>
+            </div>
+            <div class="preview-box">
+              <p class="no-preview" v-if="preview.length === 0">プレビュー表示エリア</p>
+              <table v-else>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th v-for="(column, index) in columnArray" :key="index">{{ column }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(data, index) in preview" v-bind:key="index">
+                    <td>{{ index + 1 }}</td>
+                    <td v-for="column in columnArray" :key="column" :class="{ err: data[column].err !== ''}">{{ data[column].val }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="file-area">
+            <label><input type="file" id="file" @change="handleFile">ファイル選択</label><span>{{ fields.fileName }}</span>
+          </div>
+          <ul class="button-box">
+            <li><a href="" :class="{disabled: preview.length === 0 || fields.fileErr}" @click.prevent.stop="createData">追加</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="file-area">
-      <label><input type="file" id="file" @change="handleFile">ファイル選択</label><span>{{ fields.fileName }}</span>
-    </div>
-    <ul class="button-box">
-      <li><a href="" :class="{disabled: preview.length === 0 || fields.fileErr}" @click.prevent.stop="createData">追加</a></li>
-    </ul>
   </div>
 </template>
 
@@ -39,10 +51,11 @@
 module.exports = {
   initData: function(){
     return {
-      columnArray: ['製品名','URL','必要数','在庫数','カテゴリー','お気に入り'],
+      columnArray: ['班', '学籍番号', '学生氏名'],
       preview: [],
       originData: [],
       fields: {
+        grade: '',
         fileName: '選択されていません',
         fileErr: false,
         errAmount: 0
@@ -51,6 +64,9 @@ module.exports = {
   },
   data: function() {
     return this.$options.initData();
+  },
+  mounted: function(){
+    this.fields.grade = sessionStorage.getItem('grade');
   },
   methods: {
     resetData: function(){
@@ -111,13 +127,8 @@ module.exports = {
       var array = {};
       this.columnArray.forEach((value, index) => {
         var err_msg = '';
-        if((value === '製品名' || value === '在庫数') && data[value] === undefined){
+        if(((value === '学籍番号' || value === '学生氏名') && data[value] === undefined) || (gradeArray[this.fields.grade].team && value === '班' && data[value] === undefined)){
           err_msg = '入力値がありません';
-          this.fields.fileErr = true;
-          this.fields.errAmount += 1;
-        };
-        if(value === 'お気に入り' && !(data[value] === undefined || data[value] === 1)){
-          err_msg = '入力ミスです';
           this.fields.fileErr = true;
           this.fields.errAmount += 1;
         };
@@ -132,14 +143,15 @@ module.exports = {
       this.$emit('loading-event', true);
       this.$emit('message-event', null, null, true);
       setTimeout(() => {
-        axios.post(`http://localhost:${port}/backend/controllers/item.php`,{
-          func: 'create-type01',
+        axios.post(`http://localhost:${port}/backend/controllers/user.php`,{
+          func: 'create',
+          grade: this.fields.grade,
           datas: this.originData
         }).then((res) => {
-          console.log('作成完了');
           this.resetData();
+          this.fields.grade = sessionStorage.getItem('grade');
           this.$emit('loading-event', false);
-          this.$emit('message-event', '登録が完了しました.', true, false);
+          this.$emit('message-event', '学生データの登録が完了しました.', true, false);
         });
       }, 2000);
     },

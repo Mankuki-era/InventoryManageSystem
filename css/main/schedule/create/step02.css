@@ -1,0 +1,183 @@
+.card-body .step02 {
+  display: flex;
+  flex-direction: column;
+}
+.card-body .step02 .msg {
+  margin: 1.5rem 0;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.card-body .step02 .table-contena {
+  width: 24rem;
+  height: 280px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  border: 1px solid #bbb;
+  border-radius: .3rem;
+  padding-right: 10px;
+}
+.card-body .step02 .table-contena .date-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
+.card-body .step02 .table-contena .date-row .count {
+  font-size: 15px;
+  text-align: center;
+  width: 7rem;
+}
+.card-body .step02 .table-contena .date-row .date {
+  flex: 1;
+}
+.card-body .step02 .table-contena .date-row p {
+  margin: 0;
+}
+.card-body .step02 .table-contena .date-row .select-box {
+	position: relative;
+  width: 6rem;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	background: #fff;
+}
+.card-body .step02 .table-contena .date-row .select-box::before {
+	position: absolute;
+	top: 1rem;
+	right: .6rem;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #666;
+	pointer-events: none;
+}
+.card-body .step02 .table-contena .date-row .select-box select {
+  cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+  border: none;
+	padding: .7rem 2rem .7rem .6rem;
+	color: #666;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+
+
+
+
+
+
+.card-body .step02 .form-contena {
+  flex: 1;
+  display: flex;
+  width: 40rem;
+  margin: 0 auto;
+}
+.card-body .step02 .form-contena .left-contena {
+  width: 12rem;
+}
+.card-body .step02 .form-contena .right-contena {
+  flex: 1;
+}
+.card-body .step02 .form-contena .form-name {
+  font-size: 15px;
+  color: #666;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.card-body .step02 .form-contena .left-contena .form-box:not(:first-of-type) {
+  margin-top: 2.5rem;
+}
+.form-contena .left-contena .form-box .team-select-box {
+  display: flex;
+  padding-left: 13px;
+}
+.form-contena .left-contena .form-box .team-select-box p {
+  margin: 0;
+  line-height: 35px;
+}
+.form-contena .left-contena .form-box .team-select-box p span.a {
+  font-size: 15px;
+  margin: 0;
+  line-height: 35px;
+}
+.form-contena .left-contena .form-box .team-select-box p span.c {
+  margin-left: 7px;
+}
+.card-body .step02 .form-contena .left-contena .form-box .select-contena {
+	position: relative;
+  width: 55px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	background: #fff;
+  margin-left: 10px;
+}
+.card-body .step02 .form-contena .left-contena .form-box .select-contena::before {
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #666;
+	pointer-events: none;
+}
+.card-body .step02 .form-contena .left-contena .form-box .select-contena select {
+  cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+  border: none;
+	padding: .5rem 2rem .5rem .6rem;
+  font-size: 15px;
+	color: #666;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.card-body .step02 .form-contena .right-contena .preview-area {
+  height: 280px;
+  overflow-y: scroll;
+  border: 1px solid #bbb;
+  border-radius: .3rem;
+}
+.card-body .step02 .form-contena .right-contena .preview-area .date-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
+.card-body .step02 .form-contena .right-contena .preview-area .date-row {
+  justify-content: space-between;
+}
+.form-contena .right-contena .preview-area .date-row {
+  padding-right: 10px;
+}
+.card-body .step02 .form-contena .right-contena .preview-area .date-row .count {
+  font-size: 15px;
+  text-align: center;
+  width: 5rem;
+}
+.form-contena .right-contena .preview-area .date-row input[type="text"] {
+  flex: 1;
+  padding: .5rem .8rem;
+  font-size: 15px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}

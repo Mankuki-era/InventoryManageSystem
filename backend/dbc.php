@@ -1,7 +1,7 @@
 <?php
 
 function dbConnect(){
-  $dsn = 'mysql:host=localhost;dbname=inventory;charset=utf8';
+  $dsn = 'mysql:host=localhost;dbname=attendance;charset=utf8';
   $user = 'root';
   $pass = 'root';
 

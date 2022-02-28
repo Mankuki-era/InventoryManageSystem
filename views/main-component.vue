@@ -4,7 +4,16 @@
       <ul>
         <li><a href="javascript:void(0)" id="bar"><i class="fas fa-bars"></i></a></li>
       </ul>
-      <p>管理者</p>
+      <ul class="grade-box-ul">
+        <li class="grade-box-li">
+          <a href="javascript:void(0)" class="accordion-header">{{ fields.grade }}</a>
+          <ul class="accordion-main">
+            <li v-for="link in Object.keys(gradeArray)" :key="link" v-show="link !== fields.grade">
+              <a href="" @click.prevent.stop="clickGradeLink(link)">{{ link }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <loading-component ref="loadingChild"></loading-component>
     <router-view ref="routerChild" @loading-event="loadingEvent" @open-modal="openModal" @message-event="messageEvent"></router-view>
@@ -13,7 +22,33 @@
 
 <script>
 module.exports = {
+  initData: function(){
+    return {
+      fields: {
+        grade: '',
+      }
+    };
+  },
+  data: function(){
+    return this.$options.initData();
+  },
+  mounted: function(){
+    $(function(){
+      $('.accordion-main').slideUp();
+      // ナビゲーションがクリックされた時
+      $('.grade-box-ul .grade-box-li .accordion-header').click(function(){
+        $(this).next('.accordion-main').slideToggle();
+        $(this).toggleClass("open");
+      });
+
+    });
+    this.fields.grade = sessionStorage.getItem('grade');
+  },
   methods: {
+    clickGradeLink: function(grade){
+      this.fields.grade = grade;
+      sessionStorage.setItem('grade', grade);
+    },
     loadingEvent: function(bool){
       this.$refs.loadingChild.loadingEvent(bool);
     },

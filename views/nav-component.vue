@@ -6,19 +6,14 @@
     </div>
     <div class="link-box">
       <ul class="link-box-ul">
-        <li class="link-box-li">
-          <a href="javascript:void(0)" @click.prevent.stop="router.push({path:'/create'}, () => {})" class="accordion-header create">
-            <span><i class="fas fa-fw fa-edit link-icon"></i><span class="small-hide-inline">登録</span></span>
+        <li class="link-box-li" v-for="link in navLinkArray" :key="link.name">
+          <a href="javascript:void(0)" @click.prevent.stop="clickLink(link)" class="accordion-header" :class="setClass(link.name)">
+            <span><span v-html="link.icon" class="link-icon"></span><span class="small-hide-inline">{{ link.name_jp }}</span></span>
+            <i v-show="link.subLinkArray !== ''" class="fas fa-angle-left right angle-icon small-hide-inline"></i>
           </a>
-        </li>
-        <li class="link-box-li">
-          <a href="javascript:void(0)" @click.prevent.stop="clickIndexLink" class="accordion-header index">
-            <span><i class="fas fa-fw fa-list link-icon"></i><span class="small-hide-inline">一覧</span></span>
-            <i class="fas fa-angle-left right angle-icon small-hide-inline"></i>
-          </a>
-          <ul class="accordion-main small-hide-block">
-            <li v-for="(link, index) in linkArray" :key="index">
-              <a href="" :class="{ selected: fields.indexType === link }" @click.prevent.stop="clickLink(link)">{{ link }}</a>
+          <ul v-show="link.subLinkArray" class="accordion-main small-hide-block">
+            <li v-for="subLink in link.subLinkArray" :key="subLink.name">
+              <a href="" :class="{ selected: fields.subLinkName === subLink.name }" @click.prevent.stop="clickSubLink(subLink.name)">{{ subLink.name_jp }}</a>
             </li>
           </ul>
         </li>
@@ -31,13 +26,11 @@
 module.exports = {
   mounted() {
     $(function(){
-      if(sessionStorage.getItem('linkName') === 'create'){
-        $('.link-box-li .accordion-header.create').addClass("open");
-        $('.link-box-li .accordion-header.index').next('.link-box-li .accordion-main').hide();
-      }else if(sessionStorage.getItem('linkName') === 'index'){
-        $('.link-box-li .accordion-header.index').addClass("open");
-        $('.link-box-li .accordion-header.index').next('.link-box-li .accordion-main').show();
-      }
+      // 初期のナビゲーションの選択
+      $('.link-box-li .accordion-header.'+sessionStorage.getItem('linkName')).addClass("open");
+      $('.link-box-li .accordion-header').not('.'+sessionStorage.getItem('linkName')).next('.link-box-li .accordion-main').hide();
+
+      // ナビゲーションがクリックされた時
       $('.link-box-ul .link-box-li .accordion-header').click(function(){
         if(!$(this).hasClass('open')){
           $(this).next('.accordion-main').slideToggle();
@@ -46,7 +39,9 @@ module.exports = {
         $('.link-box-ul .link-box-li .accordion-header').not($(this)).next('.link-box-li .accordion-main').slideUp();
         $('.link-box-ul .link-box-li .accordion-header').not($(this)).removeClass("open");
       });
-      $('nav').hover( // hover時
+
+      // ナビゲーションがhoverされた時
+      $('nav').hover(
         function(){
           setTimeout(() => {
               if($('nav').hasClass('small')){
@@ -62,6 +57,8 @@ module.exports = {
           }
         }
       );
+
+      // 三本線がクリックされた時
       $('#bar').click(function(){ // barクリック時
           if($('nav').hasClass('small')){
           setTimeout(() => {
@@ -74,26 +71,42 @@ module.exports = {
         }
         $('nav').toggleClass('small');
       });
+
     });
-    this.fields.indexType = sessionStorage.getItem('indexType');
+    this.fields.linkName = sessionStorage.getItem('linkName');
+    this.fields.subLinkName = sessionStorage.getItem('subLinkName');
   },
   data () {
     return {
       fields: {
-        indexType: ''
+        linkName: '',
+        subLinkName: ''
       },
-      linkArray: ['すべて','1EC','2EC','3EC','2NC','3NC','4EC','4NC','管理室']
     }
   },
   methods: {
-    clickIndexLink: function(){
-      this.fields.indexType = sessionStorage.getItem('indexType');
-      router.push({path:'/index'}, () => {});
+    setClass: function(linkName){
+      return `${linkName}`;
     },
     clickLink: function(link){
-      this.fields.indexType = link;
-      sessionStorage.setItem('indexType', link);
-      this.$emit('indextype-click');
+      if(link.name === this.fields.linkName){
+        return;
+      };
+      this.fields.linkName = link.name;
+      this.fields.subLinkName = link.subLinkArray ? link.subLinkArray[0].name : '';
+      sessionStorage.setItem('linkName', this.fields.linkName);
+      sessionStorage.setItem('subLinkName', this.fields.subLinkName);
+      if(this.fields.subLinkName){
+        router.push({path:`/${this.fields.linkName}-${this.fields.subLinkName}`}, () => {});
+      }else{
+        router.push({path:`/${this.fields.linkName}`}, () => {});
+      }
+    },
+    clickSubLink: function(subLinkName){
+      this.fields.subLinkName = subLinkName;
+      sessionStorage.setItem('subLinkName', subLinkName);
+      router.push({path:`/${this.fields.linkName}-${this.fields.subLinkName}`}, () => {});
+      // this.$emit('indextype-click');
     },
   }
 }

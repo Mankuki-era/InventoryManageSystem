@@ -1,0 +1,197 @@
+.card-body .step01 {
+  display: flex;
+  flex-direction: column;
+}
+.card-body .step01 .msg {
+  margin: 1.5rem 0;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.card-body .step01 .form-contena {
+  flex: 1;
+  display: flex;
+  width: 40rem;
+  margin: 0 auto;
+}
+.card-body .step01 .form-contena .left-contena {
+  width: 12rem;
+}
+.card-body .step01 .form-contena .right-contena {
+  flex: 1;
+}
+.card-body .step01 .form-contena .form-name {
+  font-size: 15px;
+  color: #666;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.card-body .step01 .form-contena .left-contena .form-box:not(:first-of-type) {
+  margin-top: 2.5rem;
+}
+.card-body .step01 .form-contena .left-contena .form-box .date-edit {
+  margin-left: 10px;
+  position: relative;
+}
+.card-body .step01 .form-contena .left-contena .form-box .date-edit::before {
+  position: absolute;
+  content: '';
+  top: 9px;
+  right: 10px;
+  width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #666;
+}
+.card-body .step01 .form-contena .left-contena .form-box .date-edit input[type="date"] {
+  padding: 8px 20px 8px 5px;
+  border: 1px solid #bbb;
+  color: #666;
+  border-radius: 3px;
+  text-align: center;
+}
+.card-body .step01 .form-contena .left-contena .form-box .date-edit input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  height: 36px;
+  width: 27px;
+}
+/* .form-contena .left-contena .form-box .team-select-box {
+  display: flex;
+  padding-left: 13px;
+}
+.form-contena .left-contena .form-box .team-select-box p {
+  margin: 0;
+  line-height: 35px;
+}
+.form-contena .left-contena .form-box .team-select-box p span.a {
+  font-size: 13px;
+}
+.form-contena .left-contena .form-box .team-select-box p span.c {
+  margin-left: 7px;
+}
+.form-contena .left-contena .form-box .team-select-box p span.a {
+  margin: 0;
+  line-height: 35px;
+} */
+.card-body .step01 .form-contena .left-contena .form-box .select-contena {
+	position: relative;
+  width: 55px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	background: #fff;
+  margin-left: 10px;
+}
+.card-body .step01 .form-contena .left-contena .form-box .select-contena::before {
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #666;
+	pointer-events: none;
+}
+.card-body .step01 .form-contena .left-contena .form-box .select-contena select {
+  cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+  border: none;
+	padding: 8px 35px 8px 10px;
+	color: #666;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.card-body .step01 .form-contena .right-contena .preview-area {
+  height: 280px;
+  overflow-y: scroll;
+  border: 1px solid #bbb;
+  border-radius: .3rem;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-row {
+  justify-content: space-between;
+}
+.form-contena .right-contena .preview-area .date-row {
+  padding-right: 10px;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-row .count {
+  font-size: 15px;
+  text-align: center;
+  width: 7rem;
+}
+.form-contena .right-contena .preview-area .date-row input[type="text"] {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-edit {
+  flex: 1;
+  position: relative;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-edit:not(.first):before {
+  position: absolute;
+  content: '';
+  top: 1rem;
+  left: 7.8rem;
+  width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #666;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-edit input[type="date"] {
+  padding: .5rem 2rem .5rem .3rem;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  text-align: center;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-edit:not(.first) input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 7rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .date-edit.first input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .auto-fill {
+  width: 30px;
+}
+.card-body .step01 .form-contena .right-contena .preview-area .auto-fill a {
+  color: #007bff;
+  font-size: 1.3rem;
+}
+.card-body .step01 ul li:not(:first-of-type) {
+  margin-left: 10px;
+}

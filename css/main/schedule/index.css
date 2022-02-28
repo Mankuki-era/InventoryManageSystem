@@ -1,0 +1,111 @@
+.content.schedule-index .card .card-header {
+  background-color: #007bff;
+  color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 0.55rem 1.25rem;
+  position: relative;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content.schedule-index .card .card-header .left-box {
+  margin-left: 1rem;
+}
+.content.schedule-index .card .card-header .left-box .amount-box {
+  margin: 0;
+}
+.content.schedule-index .card .card-header .right-box ul {
+  display: flex;
+  align-items: center;
+}
+.content.schedule-index .card .card-header .right-box ul li a {
+  background-color: #28a745;
+  border-radius: 0.25rem;
+  width: 3.2rem;
+  text-align: center;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  margin-left: 0.7rem;
+}
+.content.schedule-index .card .card-header .right-box ul li a:hover {
+  opacity: .9;
+}
+.content.schedule-index .card .card-header .right-box ul li a.disabled {
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+.content.schedule-index .card .card-body {
+  padding: 1.2rem 1.5rem;
+}
+.content.schedule-index .card .card-body table {
+  border-collapse: collapse;
+}
+.content.schedule-index .card .card-body table th {
+  background-color: #f3f3f3;
+  padding: 0;
+  white-space: nowrap;
+}
+.content.schedule-index .card .card-body table th, .content.schedule-index .card .card-body table td {
+  border: 1px solid #aaa;
+  color: #444;
+  font-size: .8rem;
+  font-weight: bold;
+}
+.content.schedule-index .card .card-body table thead tr .thema-name {
+  text-align: center;
+  writing-mode: vertical-rl;
+  font-size: .8rem;
+}
+.content.schedule-index .card .card-body table thead tr .team-name {
+  text-align: center;
+  font-size: .8rem;
+  line-height: 2rem;
+}
+.content.schedule-index .card .card-body table tbody tr th {
+  width: 10rem;
+  text-align: center;
+  font-size: .8rem;
+}
+.content.schedule-index .card .card-body table tbody tr td {
+  padding: 0;
+  text-align: center;
+  height: 1.8rem;
+}
+
+.content.schedule-index .card .card-body table.type01 {
+  margin: 0 auto;
+}
+.content.schedule-index .card .card-body table.type02, .content.schedule-index .card .card-body table.type03 {
+  width: 100%;
+}
+.content.schedule-index .card .card-body table.type01 tbody tr td {
+  width: 10rem;
+}
+
+
+.content.schedule-index .card .card-body.no-data {
+  text-align: center;
+  padding: 8rem;
+}
+.content.schedule-index .card .card-body.no-data .icon-contena {
+  color: #ccc;
+  font-size: 40px;
+}
+.content.schedule-index .card .card-body.no-data p:first-of-type{
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.content.schedule-index .card .card-body.no-data p:last-of-type{
+  color: #aaa;
+  font-size: 14px;
+}
